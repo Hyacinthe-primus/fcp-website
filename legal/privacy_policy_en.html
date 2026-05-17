@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy File Converter Pro</title>
+    <meta name="description" content="Privacy Policy for File Converter Pro — a 100% offline application that never collects your data.">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+    <style>
+        /* ── Theme variables (mirrors site style.css) ── */
+        :root,
+        [data-theme="dark"] {
+            --bg:          #1e1e1e;
+            --bg-2:        #252526;
+            --bg-card:     #2d2d2d;
+            --bg-card-2:   #333333;
+            --border:      rgba(255,255,255,0.08);
+            --border-2:    rgba(255,255,255,0.15);
+            --text:        #d4d4d4;
+            --text-muted:  #9d9d9d;
+            --text-dim:    #6b6b6b;
+            --accent:      #4dabf7;
+            --accent-2:    #74c0fc;
+            --accent-glow: rgba(77,171,247,0.18);
+            --green:       #4ec994;
+            --orange:      #ce9178;
+            --red:         #f47067;
+            --yellow:      #ffc107;
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+            --radius:      6px;
+            --radius-lg:   12px;
+            --transition:  0.22s ease;
+            --font-body:   'DM Sans', system-ui, sans-serif;
+            --font-mono:   'DM Mono', 'Fira Code', monospace;
+        }
+        [data-theme="light"] {
+            --bg:          #ffffff;
+            --bg-2:        #f3f6fb;
+            --bg-card:     #ffffff;
+            --bg-card-2:   #e8f0fb;
+            --border:      rgba(26,127,212,0.12);
+            --border-2:    rgba(26,127,212,0.22);
+            --text:        #0f1117;
+            --text-muted:  #3b4a63;
+            --text-dim:    #8494ae;
+            --accent:      #1a7fd4;
+            --accent-2:    #3a9ff5;
+            --accent-glow: rgba(26,127,212,0.16);
+            --green:       #1a7a3c;
+            --orange:      #a85c00;
+            --red:         #b83232;
+            --yellow:      #b88a00;
+            --shadow-card: 0 1px 3px rgba(26,127,212,0.07), 0 4px 16px rgba(26,127,212,0.06);
+            --radius:      6px;
+            --radius-lg:   12px;
+            --transition:  0.22s ease;
+            --font-body:   'DM Sans', system-ui, sans-serif;
+            --font-mono:   'DM Mono', 'Fira Code', monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--accent-2); text-decoration: underline; }
+
+        /* ── Top bar ── */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-2);
+            border-bottom: 1px solid var(--border);
+            padding: .75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            backdrop-filter: blur(8px);
+        }
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            font-size: .875rem;
+            color: var(--text-muted);
+        }
+        .topbar-left a {
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            transition: color var(--transition);
+        }
+        .topbar-left a:hover { color: var(--accent); text-decoration: none; }
+        .topbar-sep { color: var(--text-dim); }
+        .topbar-title { color: var(--text); font-weight: 500; }
+
+        .theme-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border-2);
+            border-radius: var(--radius);
+            padding: .4rem .65rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: .9rem;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+        [data-theme="dark"]  .icon-sun  { display: inline-block; }
+        [data-theme="dark"]  .icon-moon { display: none; }
+        [data-theme="light"] .icon-sun  { display: none; }
+        [data-theme="light"] .icon-moon { display: inline-block; }
+
+        /* ── Layout ── */
+        .wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        /* ── Typography ── */
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: .75rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 2.5rem;
+            margin-bottom: .75rem;
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            margin-bottom: .5rem;
+        }
+        p { color: var(--text-muted); margin-bottom: .75rem; }
+        strong { color: var(--text); font-weight: 600; }
+
+        ul { padding-left: 1.25rem; color: var(--text-muted); }
+        ul li { margin-bottom: .5rem; list-style: none; padding-left: .25rem; }
+
+        .date-info { color: var(--text-dim); font-size: .85rem; margin-bottom: 2rem; font-family: var(--font-mono); }
+
+        /* ── Callout boxes ── */
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: .75rem;
+            color: var(--text-muted);
+        }
+        .highlight-box .icon { flex-shrink: 0; margin-top: 2px; fill: var(--yellow); }
+
+        /* ── Contact list ── */
+        .contact-list { list-style: none; padding: 0; margin-top: .75rem; display: flex; flex-direction: column; gap: .75rem; }
+        .contact-item { display: flex; align-items: center; gap: .6rem; color: var(--text-muted); font-size: .9rem; }
+        .contact-item .icon { fill: var(--text-dim); flex-shrink: 0; width: 18px; height: 18px; }
+
+        /* ── Icon sizing ── */
+        .icon { width: 20px; height: 20px; fill: currentColor; vertical-align: middle; }
+
+        /* ── Divider ── */
+        hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+        /* ── Footer ── */
+        .doc-footer { text-align: center; color: var(--text-dim); font-size: .8rem; }
+        .doc-footer em { color: var(--text-dim); font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to site</a>
+            <span class="topbar-sep">/</span>
+            <span class="topbar-title">Privacy Policy</span>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-sun icon-sun"></i>
+            <i class="fas fa-moon icon-moon"></i>
+        </button>
+    </div>
+
+    <div class="wrapper">
+
+        <h1>File Converter Pro — Privacy Policy</h1>
+        <p class="date-info">Last updated: February 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>We take the protection of your personal data very seriously. This privacy policy explains how File Converter Pro handles your information.</p>
+
+        <h2>2. Privacy Philosophy</h2>
+        <p><strong>File Converter Pro is a 100% offline application.</strong> We firmly believe that your files belong to you and should remain on your machine.</p>
+
+        <h2>3. Information Collection</h2>
+        <h3>3.1 Personal Data</h3>
+        <p><strong>We do NOT collect ANY personal data.</strong> No information about you is sent to our servers or to third parties.</p>
+
+        <h3>3.2 File Processing</h3>
+        <p>All files you convert, merge, compress, or modify are processed <strong>locally on your computer</strong>. No file is ever sent over the Internet.</p>
+
+        <h2>4. File Usage</h2>
+        <p>Your files are:</p>
+        <ul>
+            <li>✅ <strong>Processed only on your machine</strong> — No transfer to external servers</li>
+            <li>✅ <strong>Not sent to third parties</strong> — We never share your files</li>
+            <li>✅ <strong>Deleted according to your instructions</strong> — You have complete control over your data</li>
+            <li>✅ <strong>Temporarily stored if necessary</strong> — Only for ongoing operations</li>
+        </ul>
+
+        <h2>5. Local Technical Data</h2>
+        <h3>5.1 Configuration Files</h3>
+        <p>The application saves your preferences (theme, language, settings) locally in an encrypted configuration file on your machine.</p>
+
+        <h3>5.2 Conversion History</h3>
+        <p>A local history of your conversions is stored on your machine for your convenience. You can delete it at any time via settings.</p>
+
+        <h3>5.3 Usage Statistics</h3>
+        <p>Some anonymous statistics may be collected locally (number of conversions, formats used) to improve user experience. This data remains on your machine.</p>
+
+        <h2>6. Information Sharing</h2>
+        <p><strong>No information is shared with third parties.</strong> We do not sell, rent, or share your data with any company or organization.</p>
+
+        <h2>7. Security</h2>
+        <p>We implement robust security measures to protect your files:</p>
+        <ul>
+            <li>🔒 <strong>Local encryption</strong> of sensitive configuration files</li>
+            <li>🔒 <strong>Process isolation</strong> to prevent data leaks</li>
+            <li>🔒 <strong>Automatic cleanup</strong> of temporary files after use</li>
+            <li>🔒 <strong>Minimal permissions</strong> — The application only accesses files you select</li>
+        </ul>
+
+        <h2>8. Cookies and Similar Technologies</h2>
+        <p><strong>The application does not use cookies.</strong> Being an offline desktop application, no cookies or web tracking technologies are used.</p>
+
+        <h2>9. Your Rights</h2>
+        <p>As a user, you have the right to:</p>
+        <ul>
+            <li>👁️ <strong>Access</strong> all data stored locally</li>
+            <li>✏️ <strong>Modify</strong> your preferences at any time</li>
+            <li>🗑️ <strong>Delete</strong> all application data completely</li>
+            <li>⚙️ <strong>Export</strong> your settings and history</li>
+        </ul>
+
+        <h2>10. Consent</h2>
+        <p>By using File Converter Pro, you consent to our privacy policy and acknowledge that:</p>
+        <ul>
+            <li>✅ All processing is done locally</li>
+            <li>✅ No data is collected or sent</li>
+            <li>✅ You are responsible for backing up your files</li>
+        </ul>
+
+        <h2>11. Policy Modifications</h2>
+        <p>We may update this privacy policy. Any significant changes will be notified when launching the application.</p>
+
+        <h2>12. Report a Bug or Security Issue</h2>
+        <p>If you discover a security vulnerability or bug that could affect privacy, please contact us immediately:</p>
+        <div class="highlight-box">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+                <strong>Email:</strong> <a href="mailto:hyacintheatho91@gmail.com?subject=Report%20Bug%20from%20File%20Converter%20Pro">hyacintheatho91@gmail.com</a><br>
+                <strong>Subject:</strong> Report Bug from File Converter Pro
+            </div>
+        </div>
+
+        <h2>13. Contact</h2>
+        <p>For any questions regarding this privacy policy, please do not hesitate to contact us:</p>
+
+        <ul class="contact-list">
+            <li class="contact-item">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <a href="mailto:hyacintheatho91@gmail.com">hyacintheatho91@gmail.com</a>
+            </li>
+            <li class="contact-item">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <a href="https://github.com/Hyacinthe-primus" target="_blank" rel="noopener">github.com/Hyacinthe-primus</a>
+            </li>
+            <li class="contact-item">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.56.216.96.474 1.38.894.42.42.678.82.894 1.38.163.422.358 1.057.412 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.412 2.227-.216.56-.474.96-.894 1.38-.42.42-.82.678-1.38.894-.422.163-1.057.358-2.227.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.56-.216-.96-.474-1.38-.894-.42-.42-.678-.82-.894-1.38-.163-.422-.358-1.057-.412-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.216-.56.474-.96.894-1.38.42-.42.82-.678 1.38-.894.422-.163 1.057-.358 2.227-.412 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.124 1.382-.667.667-1.076 1.336-1.382 2.124-.297.763-.498 1.634-.555 2.911-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.382 2.124.667.667 1.336 1.076 2.124 1.382.763.297 1.634.498 2.911.555 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.124-1.382.667-.667 1.076-1.336 1.382-2.124.297-.763.498-1.634.555-2.911.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.382-2.124-.667-.667-1.336-1.076-2.124-1.382-.763-.297-1.634-.498-2.911-.555-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <a href="https://www.instagram.com/___hyacinthe_" target="_blank" rel="noopener">instagram.com/___hyacinthe_</a>
+            </li>
+            <li class="contact-item">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.67 15.39c.123.362.03.65-.262.793-.418.204-1.303.355-2.162.355-1.233 0-2.285-.316-3.054-.877-.233.197-.55.318-.895.318-.344 0-.662-.12-.895-.318-.768.56-1.82 1.054-3.054 1.054-.859 0-1.744-.15-2.162-.355-.292-.143-.385-.43-.262-.793.15-.443.518-.727 1.042-.85.342-.08.761-.118 1.252-.118.845 0 1.625.106 2.13.284.157-.306.31-.637.452-.988-1.554-.424-2.67-1.516-2.67-2.827 0-1.57 1.62-2.844 3.618-2.844s3.618 1.274 3.618 2.844c0 1.31-1.116 2.403-2.67 2.827.142.35.295.682.452.988.505-.178 1.285-.284 2.13-.284.49 0 .91.038 1.252.118.524.123.892.407 1.042.85z"/></svg>
+                <a href="https://www.reddit.com/user/___Hyacinthe_/" target="_blank" rel="noopener">reddit.com/user/___Hyacinthe_/</a>
+            </li>
+        </ul>
+
+        <hr>
+        <div class="doc-footer">
+            <p>© 2026 Prime Enterprises (Hyacinthe) — All rights reserved</p>
+            <em>This application is designed with respect for your privacy.</em>
+        </div>
+
+    </div>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            const html = document.documentElement;
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('fcp-theme', next);
+        });
+    </script>
+</body>
+</html>

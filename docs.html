@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - File Converter Pro</title>
+  <meta name="description" content="Setup guide, supported formats, optional tools, troubleshooting and contributing guide for File Converter Pro.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="File Converter Pro" class="logo-img">
+            <span class="logo-text">File Converter Pro</span>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation" id="mobile-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
+            <li class="nav-item"><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+            <li class="nav-item active"><a href="docs.html" class="nav-link">Docs</a></li>
+          </ul>
+          <div class="header-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+              <i class="fas fa-moon icon-moon"></i>
+              <i class="fas fa-sun icon-sun"></i>
+            </button>
+            <a href="download.html" class="btn btn-primary btn-sm nav-cta">Download Free</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-label">Documentation</p>
+        <h1>Getting started</h1>
+        <p>Everything you need as a user or contributor.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="docs-layout">
+
+          <!-- Sidebar -->
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>For Users</h4>
+              <ul>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#portable">Portable version</a></li>
+                <li><a href="#requirements">System requirements</a></li>
+                <li><a href="#optional-tools">Optional tools</a></li>
+                <li><a href="#defender">Windows Defender</a></li>
+                <li><a href="#i18n">Languages</a></li>
+              </ul>
+              <h4 style="margin-top:1.5rem">For Developers</h4>
+              <ul>
+                <li><a href="#clone">Clone &amp; install</a></li>
+                <li><a href="#structure">Project structure</a></li>
+                <li><a href="#build">Building the exe</a></li>
+                <li><a href="#contributing">Contributing</a></li>
+              </ul>
+              <h4 style="margin-top:1.5rem">Reference</h4>
+              <ul>
+                <li><a href="#known-limits">Known limitations</a></li>
+                <li><a href="#license">License</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="docs-content">
+
+            <h2 id="install">Installation</h2>
+            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.4</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
+            <p>The installer:</p>
+            <ul>
+              <li>Runs without administrator rights</li>
+              <li>Supports English and French during setup</li>
+              <li>Targets 64-bit Windows 10 / 11 only</li>
+              <li>Optionally creates a Desktop shortcut</li>
+              <li>Optionally associates <code>.fcproj</code> project files with the app</li>
+              <li>Offers to add a Windows Defender exclusion for the install folder</li>
+            </ul>
+
+            <h3>PowerShell one-liner (silent install)</h3>
+            <div class="code-block">
+              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.4.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
+              <button class="copy-btn">Copy</button>
+            </div>
+
+            <h2 id="portable">Portable version</h2>
+            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>File Converter Pro.exe</code>. All settings, history, and achievements are stored in the same folder — move the folder and everything moves with it.</p>
+            <div class="alert">The portable version does not create automatic file associations for <code>.fcproj</code> files. Open projects via <strong>File → Open Project</strong> inside the app.</div>
+
+            <h3>PowerShell one-liner (portable)</h3>
+            <div class="code-block">
+              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.4.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
+              <button class="copy-btn">Copy</button>
+            </div>
+
+            <h2 id="requirements">System requirements</h2>
+            <table class="req-table">
+              <thead><tr><th>Component</th><th>Requirement</th></tr></thead>
+              <tbody>
+                <tr><td>OS</td><td>Windows 10 or 11 (64-bit)</td></tr>
+                <tr><td>RAM</td><td>4 GB min / 8 GB recommended</td></tr>
+                <tr><td>Disk</td><td>~500 MB free</td></tr>
+                <tr><td>Display</td><td>1280 × 720 or higher</td></tr>
+                <tr><td>Dependencies</td><td>None — fully self-contained</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="optional-tools">Optional tools</h2>
+            <p>FCP works on a clean machine. Install any of the following and it will detect them automatically for higher-quality output — no configuration needed.</p>
+            <table class="req-table">
+              <thead><tr><th>Tool</th><th>What it unlocks</th></tr></thead>
+              <tbody>
+                <tr><td>Microsoft Office</td><td>Pixel-perfect DOCX / XLSX / PPTX → PDF via COM automation. Required for legacy .ppt.</td></tr>
+                <tr><td>LibreOffice</td><td>High-quality PPTX → PDF and XLSX → PDF without Office.</td></tr>
+                <tr><td>Pandoc</td><td>Better TXT / RTF / EPUB → PDF; RTF → DOCX with proper formatting.</td></tr>
+                <tr><td>MiKTeX</td><td>Pandoc's LaTeX PDF pipeline for best typographic output.</td></tr>
+                <tr><td>wkhtmltopdf</td><td>Best HTML → PDF rendering — full CSS, fonts, local images.</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="defender">Windows Defender &amp; antivirus</h2>
+            <p>Adding the install folder to Defender exclusions is strongly recommended. The installer offers to do this automatically. For the portable version:</p>
+            <div class="code-block">
+              <code>Add-MpPreference -ExclusionPath "C:\Your\Folder\File Converter Pro"</code>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <p>If you get an <em>"application control policy blocked this file"</em> error, run this in an Administrator PowerShell, replacing the path with your actual install folder:</p>
+            <div class="code-block">
+              <code>Get-ChildItem -Path "C:\Your\path\to\File Converter Pro" -Recurse | Unblock-File</code>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <div class="alert warn">Adding a Defender exclusion and running Unblock-File are two separate mechanisms. Both may be needed if you downloaded the portable zip.</div>
+
+            <h2 id="i18n">Languages</h2>
+            <p>FCP ships with built-in French and English. To add a new language: create a <code>.lang</code> file (UTF-8 JSON) and place it in the <code>languages/</code> folder next to the executable. It will appear in Settings automatically on next launch.</p>
+            <p>See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> for a step-by-step guide.</p>
+
+            <h2 id="clone">Clone &amp; install</h2>
+            <div class="code-block">
+              <code>git clone https://github.com/Hyacinthe-primus/File_Converter_Pro.git
+cd File_Converter_Pro
+pip install -r requirements.txt
+python main.py</code>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <p>Requires Python 3.11 or 3.13.</p>
+
+            <h2 id="structure">Project structure</h2>
+            <div class="code-block">
+              <code>File Converter Pro/
+│
+├── main.py                       # Entry point — splash, single instance, CLI, drag &amp; drop
+├── config.py                     # Encrypted config manager, Windows dark mode detection
+├── translations.py               # i18n engine (FR/EN built-in + .lang file support)
+├── conversion_worker.py          # Background QThread conversion worker
+├── advanced_conversions.py       # Extra conversion routines
+├── dashboard.py                  # Statistics dashboard (Matplotlib animated charts)
+├── database.py                   # SQLite abstraction layer
+├── donate.py                     # Donation dialog — kofi, animated UI, donor flag
+├── history.py                    # Conversion history panel
+├── widgets.py                    # Shared custom Qt widgets (AnimatedCheckBox, etc.)
+├── special_events_manager.py     # Date-aware special events (birthday, new year…)
+├── system_notifier.py            # Native Windows desktop notifications
+├── quick_check.py                # Companion build-verification tool (Tkinter)
+│
+├── app/
+│   ├── __init__.py               # FadingMainWindow, FileConverterApp
+│   ├── ui.py                     # AppUIMixin — all UI construction
+│   └── logic.py                  # AppLogicMixin — all business logic
+│
+├── converter/
+│   ├── converters.py             # AdvancedConverterEngine — all format pipelines
+│   └── advanced_db.py            # SQLite DB for conversion stats
+│
+├── context_menu/
+│   ├── __init__.py              # Package initializer
+│   └── window.py                # ContextMenuManager — Windows Explorer context menu integration
+│
+├── achievements/
+│   ├── achievements_system.py    # Achievement definitions and unlock logic
+│   ├── achievements_manager.py   # Persistence and state management
+│   ├── achievements_ui.py        # Full achievements panel UI
+│   ├── achievements_popup.py     # Animated real-time unlock pop-up
+│   └── rank_popup.py             # Rank-up celebration dialog
+│
+├── dialogs/
+│   ├── dialogs.py                # General-purpose dialogs
+│   ├── terms_dialog.py           # Terms &amp; Privacy acceptance dialog
+│   └── word_to_pdf_dialog.py     # Word → PDF options dialog (mode, quality, metadata)
+│
+└── templates/
+    ├── templates.py              # Conversion template definitions
+    └── template_manager.py       # Save / load / apply templates</code>
+              <button class="copy-btn">Copy</button>
+            </div>
+
+            <h2 id="build">Building the exe</h2>
+            <p>The project uses PyInstaller for the executable and Inno Setup for the installer. See the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> for the full build guide. Note: UPX is used — be careful with Qt DLLs as improper usage can corrupt them.</p>
+
+            <h2 id="contributing">Contributing</h2>
+            <p>Contributions are welcome — translations, bug fixes, or larger features. Read <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> first. For complex changes (Linux port, new format category), open an issue before starting work.</p>
+
+            <h2 id="known-limits">Known limitations</h2>
+            <table class="req-table">
+              <thead><tr><th>Area</th><th>Details</th></tr></thead>
+              <tbody>
+                <tr><td>Windows only</td><td>COM automation, registry-based dark mode detection, and PyInstaller packaging are Windows-first. macOS / Linux planned.</td></tr>
+                <tr><td>Build size</td><td>~435 MB compiled — inherent to Python + PySide6 + Matplotlib.</td></tr>
+                <tr><td>PDF → DOCX quality</td><td>Depends on source PDF. Scanned PDFs with no text layer are only partially recoverable.</td></tr>
+                <tr><td>.ppt legacy format</td><td>Requires Microsoft Office or LibreOffice. python-pptx cannot open old binary .ppt files.</td></tr>
+                <tr><td>No cloud / sync</td><td>History and settings are local only — no backup, no multi-device profiles.</td></tr>
+                <tr><td>Solo development</td><td>Progression depends on availability outside of studies.</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="license">License</h2>
+            <p>File Converter Pro uses a dual licensing model:</p>
+            <ul>
+              <li><strong>GPLv3</strong> — free to use, modify, and distribute. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">LICENSE.txt</a>.</li>
+              <li><strong>Commercial License</strong> — required for integration into proprietary or closed-source products. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">COMMERCIAL_LICENSE.md</a>.</li>
+            </ul>
+            <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). All rights reserved.</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="File Converter Pro" class="footer-logo-img">
+            <span>File Converter Pro</span>
+          </div>
+          <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
+          <p class="footer-tagline"><em>Because file conversion should actually feel good.</em></p>
+          <div class="footer-social">
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
+            <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
+            <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" aria-label="Ko-fi" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">Commercial License</a></li>
+            <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="legal/privacy_policy_en.html">Privacy Policy</a></li>
+            <li><a href="legal/terms_conditions_en.html">Terms of Use</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">GPLv3 License</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). Licensed under GPLv3 / Commercial.</p>
+        <div class="footer-badges">
+          <span class="badge-pill">v<span data-fcp="version">1.0.4</span></span>
+          <span class="badge-pill">Windows 10/11</span>
+          <span class="badge-pill">Free forever</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

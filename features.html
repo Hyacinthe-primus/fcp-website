@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - File Converter Pro</title>
+  <meta name="description" content="Explore every feature: batch conversion, statistics dashboard, achievements, dark/light mode, context menu integration and more.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    .feature-visual--lg {
+      aspect-ratio: 16 / 10;
+      padding: 1rem;
+    }
+    .feature-visual--lg img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="File Converter Pro" class="logo-img">
+            <span class="logo-text">File Converter Pro</span>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation" id="mobile-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="features.html" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
+            <li class="nav-item"><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+            <li class="nav-item"><a href="docs.html" class="nav-link">Docs</a></li>
+          </ul>
+          <div class="header-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+              <i class="fas fa-moon icon-moon"></i>
+              <i class="fas fa-sun icon-sun"></i>
+            </button>
+            <a href="download.html" class="btn btn-primary btn-sm nav-cta">Download Free</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-label">What you get</p>
+        <h1>Everything, out of the box</h1>
+        <p>A file converter that feels like a real product, not just a basic utility.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="feature-detail">
+          <div class="feature-detail-content">
+            <h2>All-in-One Conversion</h2>
+            <p>Documents, images, audio, video — handled by a single window. No juggling five different tools or browser tabs. Batch mode works across all categories; just drop as many files as you need.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Documents: TXT, RTF, CSV, JSON, XLSX, PPTX, HTML, PDF, EPUB</li>
+              <li><i class="fas fa-check-circle"></i> Images: 13+ output formats including AVIF, HEIC, ICO, DNG</li>
+              <li><i class="fas fa-check-circle"></i> Audio &amp; Video via FFmpeg</li>
+              <li><i class="fas fa-check-circle"></i> Batch conversions supported across all types</li>
+            </ul>
+          </div>
+          <div class="feature-visual"><img src="images/features/all-in-one.png" alt="All-in-One Conversion"></div>
+        </div>
+
+        <div class="feature-detail reverse">
+          <div class="feature-detail-content">
+            <h2>100% Offline &amp; Private</h2>
+            <p>Your files never leave your machine. No telemetry, no upload calls, no internet requirement of any kind during conversions. Everything runs locally using the engines already on your system.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Zero network activity during conversion</li>
+              <li><i class="fas fa-check-circle"></i> No account, no registration</li>
+              <li><i class="fas fa-check-circle"></i> Encrypted local settings (Fernet)</li>
+              <li><i class="fas fa-check-circle"></i> SQLite-backed local history only</li>
+            </ul>
+          </div>
+          <div class="feature-visual"><img src="images/features/offline.png" alt="100% Offline"></div>
+        </div>
+
+        <div class="feature-detail">
+          <div class="feature-detail-content">
+            <h2>Multi-Engine Fallback</h2>
+            <p>FCP chains multiple conversion engines automatically. It detects what's installed — Microsoft Office, LibreOffice, Pandoc, MiKTeX, wkhtmltopdf — and picks the best available one. No configuration needed.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Works on a clean machine with zero extras installed</li>
+              <li><i class="fas fa-check-circle"></i> Automatically upgrades quality when you install optional tools</li>
+              <li><i class="fas fa-check-circle"></i> PPTX→PDF: PowerPoint COM › LibreOffice CLI › python-pptx+ReportLab</li>
+              <li><i class="fas fa-check-circle"></i> HTML→PDF: wkhtmltopdf › WeasyPrint › ReportLab</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <img src="images/features/multi-engine.png" alt="Multi-Engine Fallback">
+          </div>
+        </div>
+
+        <div class="feature-detail reverse">
+          <div class="feature-detail-content">
+            <h2>Statistics Dashboard</h2>
+            <p>A full Matplotlib-powered analytics panel with animated charts showing your conversion history at a glance. Filter by date, export to CSV, JSON, or PDF.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Animated bar chart — conversions per day</li>
+              <li><i class="fas fa-check-circle"></i> Animated filled line chart — data volume over time</li>
+              <li><i class="fas fa-check-circle"></i> Animated donut chart — operation type breakdown</li>
+              <li><i class="fas fa-check-circle"></i> Filterable history table with CSV / JSON / PDF export</li>
+            </ul>
+          </div>
+          <div class="feature-visual feature-visual--lg"><img src="images/features/dashboard.png" alt="Statistics Dashboard"></div>
+        </div>
+
+        <div class="feature-detail">
+          <div class="feature-detail-content">
+            <h2>Achievements &amp; Rank Progression</h2>
+            <p>A complete gamification system backed by SQLite. Achievements unlock based on conversion counts, format diversity, streaks, and special events. Can be disabled in settings.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Animated pop-ups when an achievement is earned</li>
+              <li><i class="fas fa-check-circle"></i> Rank-up celebration dialogs at milestone ranks</li>
+              <li><i class="fas fa-check-circle"></i> Full achievements panel — browse locked &amp; unlocked states</li>
+              <li><i class="fas fa-check-circle"></i> Entirely optional — disable from settings</li>
+            </ul>
+          </div>
+          <div class="feature-visual feature-visual--lg"><img src="images/features/achievements.png" alt="Achievements"></div>
+        </div>
+
+        <div class="feature-detail reverse">
+          <div class="feature-detail-content">
+            <h2>Windows Context Menu Integration</h2>
+            <p>Right-click any supported file in File Explorer and you'll see a <strong>Convert with FCP</strong> sub-menu listing only the relevant conversions for that file type. A lightweight Quick Convert window opens, runs the conversion, and closes automatically.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Works on all supported formats</li>
+              <li><i class="fas fa-check-circle"></i> Each file type shows only its relevant conversions</li>
+              <li><i class="fas fa-check-circle"></i> Quick Convert closes automatically after success</li>
+              <li><i class="fas fa-check-circle"></i> Enabled during install — can be unchecked</li>
+            </ul>
+          </div>
+          <div class="feature-visual"><img src="images/features/context-menu.png" alt="Context Menu Integration"></div>
+        </div>
+
+        <div class="feature-detail">
+          <div class="feature-detail-content">
+            <h2>Polished UI &amp; Special Events</h2>
+            <p>Automatic dark/light mode reading directly from the Windows registry. Animated splash screen with crossfade into the main window. Date-aware special event overlays with animated Perlin-noise borders and particle confetti.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Glassmorphism stat cards and fluid transitions</li>
+              <li><i class="fas fa-check-circle"></i> Single-instance: a second launch focuses the running window</li>
+              <li><i class="fas fa-check-circle"></i> Native Windows toast notifications on conversion finish</li>
+              <li><i class="fas fa-check-circle"></i> Drag files directly onto the <code>.exe</code> to pre-load them</li>
+            </ul>
+          </div>
+          <div class="feature-visual"><img src="images/features/ui.gif" alt="Polished UI"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>Sounds good? It's free.</h2>
+        <p>No trial. No premium tier. The whole thing, forever.</p>
+        <div class="cta-actions">
+          <a href="download.html" class="btn btn-primary btn-lg"><i class="fab fa-windows"></i> Download Free</a>
+          <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" class="btn btn-outline btn-lg" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i> Source Code</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="File Converter Pro" class="footer-logo-img">
+            <span>File Converter Pro</span>
+          </div>
+          <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
+          <p class="footer-tagline"><em>Because file conversion should actually feel good.</em></p>
+          <div class="footer-social">
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
+            <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
+            <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" aria-label="Ko-fi" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">Commercial License</a></li>
+            <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="legal/privacy_policy_en.html">Privacy Policy</a></li>
+            <li><a href="legal/terms_conditions_en.html">Terms of Use</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">GPLv3 License</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). Licensed under GPLv3 / Commercial.</p>
+        <div class="footer-badges">
+          <span class="badge-pill">v<span data-fcp="version">1.0.4</span></span>
+          <span class="badge-pill">Windows 10/11</span>
+          <span class="badge-pill">Free forever</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

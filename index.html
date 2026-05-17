@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Converter Pro - Free Offline File Converter for Windows</title>
+  <meta name="description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. Free forever for Windows 10/11.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="File Converter Pro" class="logo-img">
+            <span class="logo-text">File Converter Pro</span>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation" id="mobile-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
+            <li class="nav-item"><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+            <li class="nav-item"><a href="docs.html" class="nav-link">Docs</a></li>
+          </ul>
+          <div class="header-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+              <i class="fas fa-moon icon-moon"></i>
+              <i class="fas fa-sun icon-sun"></i>
+            </button>
+            <a href="download.html" class="btn btn-primary btn-sm nav-cta">Download Free</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-label fade-up fade-up-1">
+              <i class="fas fa-circle" style="font-size:.5rem;color:var(--green)"></i>
+              v<span data-fcp="version">1.0.4</span> — Free to use, forever
+            </div>
+            <h1 class="hero-title fade-up fade-up-2">
+              Convert anything.
+              <span class="line-accent">Offline. Always.</span>
+            </h1>
+            <p class="hero-subtitle fade-up fade-up-3">
+              Documents, images, audio, video, use one tool instead of five browser tabs.
+              Your files never leave your machine. Not even for a second.
+            </p>
+            <div class="hero-actions fade-up fade-up-4">
+              <a href="download.html" class="btn btn-primary btn-lg">
+                <i class="fab fa-windows"></i> Download for Windows
+              </a>
+              <a href="features.html" class="btn btn-outline btn-lg">See what it does</a>
+            </div>
+            <div class="hero-stats fade-up fade-up-5">
+              <div class="stat-item">
+                <div class="stat-value">40+</div>
+                <div class="stat-label">Output formats</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">4</div>
+                <div class="stat-label">File categories</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Uploads needed</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual fade-up fade-up-3">
+            <div class="hero-screen">
+              <div class="screen-bar">
+                <div class="screen-dots">
+                  <div class="dot dot-red"></div>
+                  <div class="dot dot-yellow"></div>
+                  <div class="dot dot-green"></div>
+                </div>
+                <span class="screen-title">File Converter Pro — v<span data-fcp="version">1.0.4</span></span>
+              </div>
+              <img src="images/preview.gif" alt="File Converter Pro in action" class="hero-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-bar">
+      <div class="container">
+        <div class="trust-bar-inner">
+          <div class="trust-item"><i class="fas fa-lock"></i> <span>No account, no telemetry</span></div>
+          <div class="trust-item">
+            <span class="fa-stack" style="font-size:.55em;vertical-align:middle;line-height:1.8em">
+              <i class="fas fa-wifi fa-stack-1x"></i><i class="fas fa-slash fa-stack-1x"></i>
+            </span>
+            <span>Works completely offline</span>
+          </div>
+          <div class="trust-item"><i class="fas fa-infinity"></i> <span>No file size limits</span></div>
+          <div class="trust-item"><i class="fas fa-download"></i> <strong><span id="dl-count">669</span>+ downloads</strong></div>
+          <div class="trust-item"><i class="fab fa-github"></i> <span>Open source on GitHub</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header center">
+          <p class="section-label">What's inside</p>
+          <h2 class="section-title">Everything in one place</h2>
+          <p class="section-sub">No browser tabs. No accounts. No uploads. Drag, pick a format, done.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><span class="fa-stack" style="font-size:.6em"><i class="fas fa-wifi fa-stack-1x"></i><i class="fas fa-slash fa-stack-1x"></i></span></div>
+            <h3>100% Offline</h3>
+            <p>Your files never leave your machine. No telemetry, no internet required, no exceptions — not even during conversion.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Batch Processing</h3>
+            <p>Drop an entire folder and convert everything at once. Great for when you have 30 PNGs that all need to become JPEGs.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-adjust"></i></div>
+            <h3>Auto Dark / Light Mode</h3>
+            <p>Reads your Windows theme and switches instantly. Matches whatever you have on, no toggle needed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Statistics Dashboard</h3>
+            <p>Animated charts track your conversion history, volume over time, and which formats you reach for most.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+            <h3>Achievements</h3>
+            <p>Streaks, milestones, animated unlocks. Optional — turn it off in Settings if you just want the converter.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-mouse-pointer"></i></div>
+            <h3>Windows Context Menu</h3>
+            <p>Right-click any file in Explorer → <em>Convert with FCP</em>. The app opens, converts, and closes on its own.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
+            <h3>Multi-Engine Fallback</h3>
+            <p>Chains FFmpeg, LibreOffice, Pandoc, and native libraries. If one tool isn't installed, the next one picks up.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-folder-open"></i></div>
+            <h3>Project Files</h3>
+            <p>Save a conversion setup as <code>.fcproj</code>. Double-click later to restore the whole session instantly.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-globe"></i></div>
+            <h3>Multi-Language</h3>
+            <p>Ships with French and English. Add any other language by dropping a <code>.lang</code> JSON file — no code needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt formats-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Supported formats</p>
+          <h2 class="section-title">What it converts</h2>
+          <p class="section-sub">Documents, images, audio, video — all handled from one window.</p>
+        </div>
+        <div class="formats-tabs">
+          <button class="tab-btn active" data-tab="tab-docs"><i class="fas fa-file-alt"></i> Documents</button>
+          <button class="tab-btn" data-tab="tab-img"><i class="fas fa-image"></i> Images</button>
+          <button class="tab-btn" data-tab="tab-audio"><i class="fas fa-music"></i> Audio</button>
+          <button class="tab-btn" data-tab="tab-video"><i class="fas fa-film"></i> Video</button>
+        </div>
+        <div id="tab-docs" class="tab-content active">
+          <div class="formats-list">
+            <span class="format-tag">TXT</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">DOCX</span>
+            <span class="format-tag">RTF</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">DOCX</span>
+            <span class="format-tag">CSV</span><span class="format-tag arrow">→</span><span class="format-tag">JSON</span>
+            <span class="format-tag">JSON</span><span class="format-tag arrow">→</span><span class="format-tag">CSV</span>
+            <span class="format-tag">XLSX</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">JSON</span><span class="format-tag">CSV</span>
+            <span class="format-tag">PPTX</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span>
+            <span class="format-tag">HTML</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span>
+            <span class="format-tag">PDF</span><span class="format-tag arrow">→</span><span class="format-tag">HTML</span><span class="format-tag">DOCX</span>
+            <span class="format-tag">EPUB</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span>
+          </div>
+        </div>
+        <div id="tab-img" class="tab-content">
+          <div class="formats-list">
+            <span class="format-tag">Any image</span><span class="format-tag arrow">→</span>
+            <span class="format-tag">PNG</span><span class="format-tag">JPEG</span><span class="format-tag">JPG</span>
+            <span class="format-tag">WEBP</span><span class="format-tag">AVIF</span><span class="format-tag">BMP</span>
+            <span class="format-tag">TIFF</span><span class="format-tag">ICO</span><span class="format-tag">SVG</span>
+            <span class="format-tag">HEIC</span><span class="format-tag">PSD</span><span class="format-tag">DNG</span>
+            <span class="format-tag">J2K</span>
+          </div>
+          <p style="margin-top:.75rem;font-size:.83rem;">All conversions go through Pillow at maximum quality with EXIF metadata preserved.</p>
+        </div>
+        <div id="tab-audio" class="tab-content">
+          <div class="formats-list">
+            <span class="format-tag">Audio / Video</span><span class="format-tag arrow">→</span>
+            <span class="format-tag">MP3</span><span class="format-tag">WAV</span><span class="format-tag">AAC</span>
+            <span class="format-tag">OGG</span><span class="format-tag">FLAC</span><span class="format-tag">M4A</span>
+          </div>
+          <p style="margin-top:.75rem;font-size:.83rem;">Powered by FFmpeg. Requires FFmpeg to be installed on your machine — FCP detects it automatically.</p>
+        </div>
+        <div id="tab-video" class="tab-content">
+          <div class="formats-list">
+            <span class="format-tag">Video</span><span class="format-tag arrow">→</span>
+            <span class="format-tag">MP4</span><span class="format-tag">WEBM</span><span class="format-tag">MOV</span>
+            <span class="format-tag">MKV</span><span class="format-tag">AVI</span>
+          </div>
+          <p style="margin-top:.75rem;font-size:.83rem;">Powered by FFmpeg. Requires FFmpeg to be installed on your machine — FCP detects it automatically.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header center">
+          <p class="section-label">How it works</p>
+          <h2 class="section-title">Four steps, done</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Download &amp; Run</h3>
+            <p>No install wizard if you go portable. One <code>.exe</code> — double-click, you're in. Under a minute.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Add Your Files</h3>
+            <p>Drag them onto the window, onto the exe itself, or right-click in Explorer. Pick whichever feels natural.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Pick a Format</h3>
+            <p>Select the output format and hit Convert. Batch mode works exactly the same way.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>Done</h3>
+            <p>Converted files are saved directly to your output folder. You can also enable Windows notifications to know when a conversion finishes, especially useful for large batches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">vs. the alternatives</p>
+          <h2 class="section-title">How it fits</h2>
+          <p class="section-sub">Online tools are great for one-off conversions. FCP is for people who convert files regularly and don't want to keep uploading them somewhere.</p>
+        </div>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="fcp-col">File Converter Pro</th>
+                <th>CloudConvert / Zamzar</th>
+                <th>HandBrake</th>
+                <th>Format Factory</th>
+                <th>PDF24</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Offline / no upload</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+              </tr>
+              <tr>
+                <td>Documents</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-exclamation-triangle partial"></i> PDF only</td>
+              </tr>
+              <tr>
+                <td>Images</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+              </tr>
+              <tr>
+                <td>Audio &amp; Video</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i> Video only</td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+              </tr>
+              <tr>
+                <td>Free, no limits</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-exclamation-triangle partial"></i> 25/day free tier</td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-check check"></i></td>
+              </tr>
+              <tr>
+                <td>System-aware dark/light theme</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td>N/A</td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+              </tr>
+              <tr>
+                <td>Conversion history &amp; stats</td>
+                <td class="fcp-col"><i class="fas fa-check check"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+                <td><i class="fas fa-times cross"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="solo-strip">
+          <div class="solo-strip-icon">👨‍💻</div>
+          <div>
+            <h3>Built by one person while studying</h3>
+            <p>FCP is a solo project built in parallel with my studies. There's no big team or company behind it — just me creating and improving a tool I genuinely use myself. If it helps you out, a coffee or a star on GitHub is always appreciated.</p>
+          </div>
+          <div class="solo-strip-actions">
+            <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" class="btn btn-primary" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i> Buy me a coffee</a>
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" class="btn btn-ghost" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i> Star on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to stop uploading your files?</h2>
+        <p>One download. No account. No expiry. Runs entirely on your machine, as long as you want it to.</p>
+        <div class="cta-actions">
+          <a href="download.html" class="btn btn-primary btn-lg">
+            <i class="fab fa-windows"></i> Download Free — v<span data-fcp="version">1.0.4</span>
+          </a>
+          <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" class="btn btn-outline btn-lg" target="_blank" rel="noopener" data-fcp-href="githubUrl">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="File Converter Pro" class="footer-logo-img">
+            <span>File Converter Pro</span>
+          </div>
+          <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
+          <p class="footer-tagline"><em>Because file conversion should actually feel good.</em></p>
+          <div class="footer-social">
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
+            <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
+            <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" aria-label="Ko-fi" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">Commercial License</a></li>
+            <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="legal/privacy_policy_en.html">Privacy Policy</a></li>
+            <li><a href="legal/terms_conditions_en.html">Terms of Use</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">GPLv3 License</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). Licensed under GPLv3 / Commercial.</p>
+        <div class="footer-badges">
+          <span class="badge-pill">v<span data-fcp="version">1.0.4</span></span>
+          <span class="badge-pill">Windows 10/11</span>
+          <span class="badge-pill">Free forever</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

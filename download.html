@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download - File Converter Pro</title>
+  <meta name="description" content="Download File Converter Pro for Windows 10/11. Installer or portable zip — both free, no account needed.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Donation modal -->
+  <div id="donation-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-emoji">☕</div>
+      <h2 id="modal-title">Your download is starting</h2>
+      <p>FCP is built by one person in their spare time. No team, no ads, no subscriptions. If it saves you some time or frustration, even a small donation makes a real difference.</p>
+      <div class="modal-actions">
+        <a id="modal-kofi-btn" href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" class="btn btn-primary" data-fcp-href="kofiUrl">
+          <i class="fas fa-heart"></i> Support on Ko-fi — it means a lot
+        </a>
+        <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" class="btn btn-ghost" data-fcp-href="githubUrl" onclick="document.getElementById('modal-skip').click()">
+          <i class="fab fa-github"></i> Star on GitHub instead
+        </a>
+      </div>
+      <button class="modal-skip" id="modal-skip">No thanks, just download</button>
+      <div class="download-starting" id="download-starting">
+        <i class="fas fa-check-circle"></i> Download started — enjoy FCP!
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="File Converter Pro" class="logo-img">
+            <span class="logo-text">File Converter Pro</span>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation" id="mobile-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+            <li class="nav-item active"><a href="download.html" class="nav-link">Download</a></li>
+            <li class="nav-item"><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+            <li class="nav-item"><a href="docs.html" class="nav-link">Docs</a></li>
+          </ul>
+          <div class="header-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+              <i class="fas fa-moon icon-moon"></i>
+              <i class="fas fa-sun icon-sun"></i>
+            </button>
+            <a href="download.html" class="btn btn-primary btn-sm nav-cta">Download Free</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-label">Get the app</p>
+        <h1>Download File Converter Pro</h1>
+        <p>Windows 10 / 11 · 64-bit · Free forever · v<span data-fcp="version">1.0.4</span></p>
+        <div class="download-count">
+          <i class="fas fa-download"></i>
+          <span id="dl-count">669</span>+ downloads and counting
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="download-cards">
+          <div class="download-card featured">
+            <div class="card-badge">Recommended</div>
+            <div class="card-icon"><i class="fas fa-box-open"></i></div>
+            <h3>Installer</h3>
+            <p class="card-sub">Creates shortcuts, sets up the right-click context menu, and handles optional file associations. Runs silently, the whole thing takes about 10 seconds.</p>
+            <a href="#"
+               class="btn btn-primary download-trigger"
+               data-fcp-dl="installerUrl"
+               data-href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.4.exe">
+              <i class="fas fa-download"></i> FileConverterPro_Setup_v<span data-fcp="version">1.0.4</span>.exe
+            </a>
+            <p class="card-meta">No admin rights required · ~454 MB</p>
+          </div>
+
+          <div class="download-card">
+            <div class="card-icon"><i class="fas fa-file-archive"></i></div>
+            <h3>Portable ZIP</h3>
+            <p class="card-sub">No installer, no registry changes. Just extract the folder wherever you want, like a USB drive, project folder, or desktop, then run the app directly. Your settings stay inside the folder, so they move with it.</p>
+            <a href="#"
+               class="btn btn-outline download-trigger"
+               data-fcp-dl="portableUrl"
+               data-href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.4.zip">
+              <i class="fas fa-download"></i> File_Converter_Pro_v<span data-fcp="version">1.0.4</span>.zip
+            </a>
+            <p class="card-meta">No file associations set automatically</p>
+          </div>
+
+          <div class="download-card">
+            <div class="card-icon"><i class="fab fa-github"></i></div>
+            <h3>From Source</h3>
+            <p class="card-sub">Clone the repo and run it directly with Python. The setup process is fully documented and usually takes around five minutes on a clean machine.</p>
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" class="btn btn-ghost" target="_blank" rel="noopener" data-fcp-href="githubUrl">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <p class="card-meta">Requires Python 3.11 or 3.13</p>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top:3rem">
+          <p class="section-label">Terminal</p>
+          <h2 class="section-title" style="font-size:1.4rem">One-line install from PowerShell</h2>
+          <p class="section-sub" style="font-size:.88rem">For people who prefer the command line. Runs as a regular user, so there's no need for admin permissions.</p>
+        </div>
+
+        <p style="margin-bottom:.75rem;font-size:.9rem;"><strong style="color:var(--text)">Installer (silent):</strong></p>
+        <div class="code-block">
+          <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.4.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+
+        <p style="margin-bottom:.75rem;font-size:.9rem;"><strong style="color:var(--text)">Portable (extracts to Downloads):</strong></p>
+        <div class="code-block">
+          <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.4.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+
+        <div class="section-header" style="margin-top:3.5rem">
+          <p class="section-label">Before you install</p>
+          <h2 class="section-title" style="font-size:1.4rem">System requirements</h2>
+        </div>
+
+        <table class="req-table">
+          <thead>
+            <tr><th>Component</th><th>Requirement</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>OS</td><td>Windows 10 or Windows 11 (64-bit)</td></tr>
+            <tr><td>RAM</td><td>4 GB minimum / 8 GB recommended</td></tr>
+            <tr><td>Disk</td><td>~500 MB free (~454 MB compiled — Python + PySide6 + Matplotlib add up)</td></tr>
+            <tr><td>Display</td><td>1280 × 720 or higher</td></tr>
+            <tr><td>Dependencies</td><td>None — fully self-contained</td></tr>
+          </tbody>
+        </table>
+
+        <div class="section-header" style="margin-top:3.5rem">
+          <p class="section-label">Better quality</p>
+          <h2 class="section-title" style="font-size:1.4rem">Optional tools are detected automatically.</h2>
+          <p class="section-sub">FCP works fine on a clean machine. Install any of these and it will use them automatically for higher-quality output.</p>
+        </div>
+
+        <table class="req-table">
+          <thead>
+            <tr><th>Tool</th><th>What it unlocks</th><th>Where to get it</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Microsoft Office</td><td>Pixel-perfect DOCX / XLSX / PPTX → PDF via COM automation. Required for legacy .ppt files.</td><td>Microsoft 365 or standalone Office</td></tr>
+            <tr><td>LibreOffice</td><td>High-quality PPTX → PDF and XLSX → PDF when Office isn't installed.</td><td><a href="https://www.libreoffice.org/download/download/" target="_blank" rel="noopener">libreoffice.org</a></td></tr>
+            <tr><td>Pandoc</td><td>Better TXT / RTF / EPUB → PDF quality; RTF → DOCX with proper formatting.</td><td><a href="https://pandoc.org/installing.html" target="_blank" rel="noopener">pandoc.org</a></td></tr>
+            <tr><td>MiKTeX</td><td>Enables Pandoc's LaTeX-based PDF conversion for higher-quality typography when converting TXT files to PDF.</td><td><a href="https://miktex.org/download" target="_blank" rel="noopener">miktex.org</a></td></tr>
+            <tr><td>wkhtmltopdf</td><td>Provides high-quality HTML to PDF rendering with full support for CSS, fonts, and local images.</td><td><a href="https://wkhtmltopdf.org/downloads.html" target="_blank" rel="noopener">wkhtmltopdf.org</a></td></tr>
+          </tbody>
+        </table>
+
+        <div class="alert warn" style="margin-top:2.5rem">
+          <strong>Heads up — Windows Defender might flag it:</strong> FCP bundles an FFmpeg binary and is compiled with PyInstaller, which are common false-positive triggers. Adding the install folder to your Defender exclusion list (the installer offers to do this automatically) is strongly recommended. The app makes zero outbound connections during conversions. For more details and help with false positives, please read the README available at <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/README.md" target="_blank" rel="noopener" data-fcp-href="githubReadmeUrl">GitHub</a>.
+        </div>
+
+        <div style="margin-top:3rem;text-align:center">
+          <p class="section-label" style="text-align:center">Also available on</p>
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:.75rem">
+            <a href="https://hyacinthe-primus.itch.io/file-converter-pro" class="btn btn-outline" target="_blank" rel="noopener" data-fcp-href="itchioUrl">
+              <i class="fas fa-gamepad"></i> itch.io
+            </a>
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" class="btn btn-outline" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> GitHub Releases
+            </a>
+          </div>
+        </div>
+
+        <div class="solo-strip" style="margin-top:4rem">
+          <div class="solo-strip-icon">🙏</div>
+          <div>
+            <h3>FCP is free and will stay that way.</h3>
+            <p>There are no ads, no premium tier, no tracking. If FCP saves you time, you can always buy me a coffee. It helps support development and lets me keep working on it between classes.</p>
+          </div>
+          <div class="solo-strip-actions">
+            <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" class="btn btn-primary" target="_blank" rel="noopener" data-fcp-href="kofiUrl">
+              <i class="fas fa-heart"></i> Support on Ko-fi
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="File Converter Pro" class="footer-logo-img">
+            <span>File Converter Pro</span>
+          </div>
+          <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
+          <p class="footer-tagline"><em>Because file conversion should actually feel good.</em></p>
+          <div class="footer-social">
+            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
+            <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
+            <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" aria-label="Ko-fi" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">Commercial License</a></li>
+            <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="legal/privacy_policy_en.html">Privacy Policy</a></li>
+            <li><a href="legal/terms_conditions_en.html">Terms of Use</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">GPLv3 License</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). Licensed under GPLv3 / Commercial.</p>
+        <div class="footer-badges">
+          <span class="badge-pill">v<span data-fcp="version">1.0.4</span></span>
+          <span class="badge-pill">Windows 10/11</span>
+          <span class="badge-pill">Free forever</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
