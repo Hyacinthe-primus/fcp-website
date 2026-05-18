@@ -105,8 +105,22 @@ document.querySelectorAll('.download-trigger').forEach(btn => {
     btn.addEventListener('click', e => {
         e.preventDefault();
         const href = btn.getAttribute('data-href');
-        openModal();
-        modal.dataset.downloadHref = href || '';
+
+        if (href) {
+            const a = document.createElement('a');
+            a.href = href;
+            a.download = '';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        if (modal) {
+            modal.dataset.downloadHref = href || '';
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            if (dlStarting) dlStarting.classList.add('visible');
+        }
     });
 });
 
@@ -124,19 +138,30 @@ function startDownload() {
     setTimeout(closeModal, 2200);
 }
 
-if (modalClose) modalClose.addEventListener('click', () => { startDownload(); });
-if (modalSkip)  modalSkip.addEventListener('click',  () => { startDownload(); });
+if (modalClose) modalClose.addEventListener('click', () => { closeModal(); });
+if (modalSkip)  modalSkip.addEventListener('click',  () => { closeModal(); });
 
 if (modal) {
     modal.addEventListener('click', e => {
-        if (e.target === modal) { startDownload(); }
+        if (e.target === modal) { closeModal(); }
     });
 }
 
 const kofiBtn = document.getElementById('modal-kofi-btn');
 if (kofiBtn) {
-    kofiBtn.addEventListener('click', () => {
-        startDownload();
+    kofiBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(kofiBtn.href, '_blank', 'noopener');
+        closeModal();
+    });
+}
+
+const githubModalBtn = document.getElementById('modal-github-btn');
+if (githubModalBtn) {
+    githubModalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(githubModalBtn.href, '_blank', 'noopener');
+        closeModal();
     });
 }
 
