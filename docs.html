@@ -60,7 +60,6 @@
       <div class="container">
         <div class="docs-layout">
 
-          <!-- Sidebar -->
           <aside class="docs-sidebar">
             <nav class="docs-nav">
               <h4>For Users</h4>
@@ -108,7 +107,7 @@
             </div>
 
             <h2 id="portable">Portable version</h2>
-            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>File Converter Pro.exe</code>. All settings, history, and achievements are stored in the same folder — move the folder and everything moves with it.</p>
+            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>File Converter Pro.exe</code>. All settings, history, and achievements are stored in the same folder, you can move the folder and everything moves with it.</p>
             <div class="alert">The portable version does not create automatic file associations for <code>.fcproj</code> files. Open projects via <strong>File → Open Project</strong> inside the app.</div>
 
             <h3>PowerShell one-liner (portable)</h3>
@@ -125,12 +124,12 @@
                 <tr><td>RAM</td><td>4 GB min / 8 GB recommended</td></tr>
                 <tr><td>Disk</td><td>~500 MB free</td></tr>
                 <tr><td>Display</td><td>1280 × 720 or higher</td></tr>
-                <tr><td>Dependencies</td><td>None — fully self-contained</td></tr>
+                <tr><td>Dependencies</td><td>None – fully self-contained</td></tr>
               </tbody>
             </table>
 
             <h2 id="optional-tools">Optional tools</h2>
-            <p>FCP works on a clean machine. Install any of the following and it will detect them automatically for higher-quality output — no configuration needed.</p>
+            <p>FCP works on a clean machine. Install any of the following and it will detect them automatically for higher-quality output, no configuration needed.</p>
             <table class="req-table">
               <thead><tr><th>Tool</th><th>What it unlocks</th></tr></thead>
               <tbody>
@@ -219,20 +218,20 @@ python main.py</code>
             </div>
 
             <h2 id="build">Building the exe</h2>
-            <p>The project uses PyInstaller for the executable and Inno Setup for the installer. See the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> for the full build guide. Note: UPX is used — be careful with Qt DLLs as improper usage can corrupt them.</p>
+            <p>The project uses PyInstaller for the executable and Inno Setup for the installer. See the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> for the full build guide. Note: UPX is used but be careful with Qt DLLs as improper usage can corrupt them.</p>
 
             <h2 id="contributing">Contributing</h2>
-            <p>Contributions are welcome — translations, bug fixes, or larger features. Read <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> first. For complex changes (Linux port, new format category), open an issue before starting work.</p>
+            <p>Contributions are welcome: Translations, Bug fixes, or larger features. Read <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> first. For complex changes (Linux port, new format category), open an issue before starting work.</p>
 
             <h2 id="known-limits">Known limitations</h2>
             <table class="req-table">
               <thead><tr><th>Area</th><th>Details</th></tr></thead>
               <tbody>
                 <tr><td>Windows only</td><td>COM automation, registry-based dark mode detection, and PyInstaller packaging are Windows-first. macOS / Linux planned.</td></tr>
-                <tr><td>Build size</td><td>~435 MB compiled — inherent to Python + PySide6 + Matplotlib.</td></tr>
+                <tr><td>Build size</td><td>~435 MB compiled – inherent to Python + PySide6 + Matplotlib.</td></tr>
                 <tr><td>PDF → DOCX quality</td><td>Depends on source PDF. Scanned PDFs with no text layer are only partially recoverable.</td></tr>
                 <tr><td>.ppt legacy format</td><td>Requires Microsoft Office or LibreOffice. python-pptx cannot open old binary .ppt files.</td></tr>
-                <tr><td>No cloud / sync</td><td>History and settings are local only — no backup, no multi-device profiles.</td></tr>
+                <tr><td>No cloud / sync</td><td>History and settings are local only – no backup, no multi-device profiles.</td></tr>
                 <tr><td>Solo development</td><td>Progression depends on availability outside of studies.</td></tr>
               </tbody>
             </table>
@@ -240,8 +239,8 @@ python main.py</code>
             <h2 id="license">License</h2>
             <p>File Converter Pro uses a dual licensing model:</p>
             <ul>
-              <li><strong>GPLv3</strong> — free to use, modify, and distribute. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">LICENSE.txt</a>.</li>
-              <li><strong>Commercial License</strong> — required for integration into proprietary or closed-source products. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">COMMERCIAL_LICENSE.md</a>.</li>
+              <li><strong>GPLv3</strong> – free to use, modify, and distribute. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/LICENSE/LICENSE.txt" target="_blank" rel="noopener">LICENSE.txt</a>.</li>
+              <li><strong>Commercial License</strong> – required for integration into proprietary or closed-source products. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">COMMERCIAL_LICENSE.md</a>.</li>
             </ul>
             <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). All rights reserved.</p>
 
