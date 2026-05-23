@@ -1,11 +1,11 @@
 const FCP = {
-  version: "1.0.4",
+  version: "1.0.5",
   currentYear: new Date().getFullYear(),
   githubUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro",
   githubReadmeUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/README.md",
   releaseUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest",
-  installerUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.4.exe",
-  portableUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.4.zip",
+  installerUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.5.exe",
+  portableUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.5.zip",
   kofiUrl: "https://ko-fi.com/hyacinthe_primus/goal?g=0",
   itchioUrl: "https://hyacinthe-primus.itch.io/file-converter-pro",
 };
