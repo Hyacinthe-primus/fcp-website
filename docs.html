@@ -172,7 +172,7 @@ python main.py</code>
             <div class="code-block">
               <code>File Converter Pro/
 │
-├── main.py                       # Entry point — splash, single instance, CLI, drag &amp; drop
+├── main.py                       # Entry point — splash, single instance, CLI, drag & drop
 ├── config.py                     # Encrypted config manager, Windows dark mode detection
 ├── translations.py               # i18n engine (FR/EN built-in + .lang file support)
 ├── conversion_worker.py          # Background QThread conversion worker
@@ -185,19 +185,22 @@ python main.py</code>
 ├── special_events_manager.py     # Date-aware special events (birthday, new year…)
 ├── system_notifier.py            # Native Windows desktop notifications
 ├── quick_check.py                # Companion build-verification tool (Tkinter)
+├── daemon.py                     # Silent background daemon — runs watcher/scheduler tasks
+├── qss_helpers.py                # Shared QSS utilities
 │
 ├── app/
 │   ├── __init__.py               # FadingMainWindow, FileConverterApp
 │   ├── ui.py                     # AppUIMixin — all UI construction
 │   └── logic.py                  # AppLogicMixin — all business logic
 │
+├── context_menu/
+│   ├── __init__.py
+│   ├── formats.py                # Context menu formats
+│   └── window.py                 # Quick Convert popup — Windows Shell Integration
+│
 ├── converter/
 │   ├── converters.py             # AdvancedConverterEngine — all format pipelines
 │   └── advanced_db.py            # SQLite DB for conversion stats
-│
-├── context_menu/
-│   ├── __init__.py              # Package initializer
-│   └── window.py                # ContextMenuManager — Windows Explorer context menu integration
 │
 ├── achievements/
 │   ├── achievements_system.py    # Achievement definitions and unlock logic
@@ -208,8 +211,23 @@ python main.py</code>
 │
 ├── dialogs/
 │   ├── dialogs.py                # General-purpose dialogs
-│   ├── terms_dialog.py           # Terms &amp; Privacy acceptance dialog
-│   └── word_to_pdf_dialog.py     # Word → PDF options dialog (mode, quality, metadata)
+│   ├── terms_dialog.py           # Terms & Privacy acceptance dialog
+│   └── word_to_pdf_dialog.py     # Word → PDF options dialog
+│
+├── tasks/
+│   ├── __init__.py               # Automation engine: Watch Folders and Scheduled Tasks
+│   ├── watcher.py                # Folder watcher — monitors paths for new files
+│   └── scheduler.py              # Task scheduler — triggers conversions on interval/time
+│
+├── automation/
+│   └── *.toml                    # TOML rule configs for watcher & scheduler tasks
+│
+├── styles/
+│   └── themes/
+│       ├── dark/
+│       ├── light/
+│       ├── buttons.qss           # Shared — BtnOK, BtnCancel, BtnCancelRed
+│       └── *.qss / *.css
 │
 └── templates/
     ├── templates.py              # Conversion template definitions
