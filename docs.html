@@ -89,7 +89,7 @@
           <div class="docs-content">
 
             <h2 id="install">Installation</h2>
-            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.5</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
+            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.6</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
             <p>The installer:</p>
             <ul>
               <li>Runs without administrator rights</li>
@@ -102,7 +102,7 @@
 
             <h3>PowerShell one-liner (silent install)</h3>
             <div class="code-block">
-              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.5.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
+              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.6.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
               <button class="copy-btn">Copy</button>
             </div>
 
@@ -112,7 +112,7 @@
 
             <h3>PowerShell one-liner (portable)</h3>
             <div class="code-block">
-              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.5.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
+              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.6.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
               <button class="copy-btn">Copy</button>
             </div>
 
@@ -297,7 +297,7 @@ python main.py</code>
       <div class="footer-bottom">
         <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). Licensed under GPLv3 / Commercial.</p>
         <div class="footer-badges">
-          <span class="badge-pill">v<span data-fcp="version">1.0.5</span></span>
+          <span class="badge-pill">v<span data-fcp="version">1.0.6</span></span>
           <span class="badge-pill">Windows 10/11</span>
           <span class="badge-pill">Free forever</span>
         </div>
