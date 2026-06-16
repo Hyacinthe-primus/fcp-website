@@ -172,66 +172,217 @@ python main.py</code>
             <div class="code-block">
               <code>File Converter Pro/
 │
-├── main.py                       # Entry point — splash, single instance, CLI, drag & drop
-├── config.py                     # Encrypted config manager, Windows dark mode detection
-├── translations.py               # i18n engine (FR/EN built-in + .lang file support)
-├── conversion_worker.py          # Background QThread conversion worker
-├── advanced_conversions.py       # Extra conversion routines
-├── dashboard.py                  # Statistics dashboard (Matplotlib animated charts)
-├── database.py                   # SQLite abstraction layer
-├── donate.py                     # Donation dialog — kofi, animated UI, donor flag
-├── history.py                    # Conversion history panel
-├── widgets.py                    # Shared custom Qt widgets (AnimatedCheckBox, etc.)
-├── special_events_manager.py     # Date-aware special events (birthday, new year…)
-├── system_notifier.py            # Native Windows desktop notifications
-├── quick_check.py                # Companion build-verification tool (Tkinter)
-├── daemon.py                     # Silent background daemon — runs watcher/scheduler tasks
-├── qss_helpers.py                # Shared QSS utilities
+├── main.py                          # Entry point — splash, single instance, CLI, drag & drop
+├── config.py                        # Encrypted config manager, Windows dark mode detection
+├── translations.py                  # i18n engine (FR/EN built-in + .lang/.json file support)
+├── conversion_worker.py             # Background QThread conversion worker
+├── advanced_conversions.py          # Extra conversion routines
+├── dashboard.py                     # Statistics dashboard (Matplotlib animated charts)
+├── database.py                      # SQLite abstraction layer
+├── donate.py                        # Donation dialog — kofi, animated UI, donor flag
+├── history.py                       # Conversion history panel
+├── widgets.py                       # Shared custom Qt widgets (AnimatedCheckBox, etc.)
+├── special_events_manager.py        # Date-aware special events (birthday, new year…)
+├── system_notifier.py               # Native Windows desktop notifications
+├── quick_check.py                   # Companion build-verification tool (Tkinter)
+├── daemon.py                        # Silent background daemon — watcher/scheduler tasks
+├── qss_helpers.py                   # Shared QSS utilities
 │
 ├── app/
-│   ├── __init__.py               # FadingMainWindow, FileConverterApp
-│   ├── ui.py                     # AppUIMixin — all UI construction
-│   └── logic.py                  # AppLogicMixin — all business logic
+│   ├── __init__.py                  # FadingMainWindow, FileConverterApp
+│   ├── ui.py                        # AppUIMixin — all UI construction
+│   ├── logic.py                     # AppLogicMixin — all business logic
+│   └── mixins/
+│       ├── __init__.py
+│       ├── archive_engines.py
+│       ├── batch.py
+│       ├── compression.py
+│       ├── file_management.py
+│       ├── image_to_pdf.py
+│       ├── optimization.py
+│       ├── panels.py
+│       ├── pdf_operations.py
+│       ├── pdf_to_word.py
+│       ├── project_management.py
+│       ├── theme_language.py
+│       └── word_to_pdf.py
 │
 ├── context_menu/
 │   ├── __init__.py
-│   ├── formats.py                # Context menu formats
-│   └── window.py                 # Quick Convert popup — Windows Shell Integration
+│   ├── formats.py                   # Context menu formats
+│   └── window.py                    # Quick Convert popup — Windows Shell Integration
 │
 ├── converter/
-│   ├── converters.py             # AdvancedConverterEngine — all format pipelines
-│   └── advanced_db.py            # SQLite DB for conversion stats
+│   ├── __init__.py
+│   ├── converters.py                # AdvancedConverterEngine — all format pipelines
+│   ├── advanced_db.py               # SQLite DB for conversion stats
+│   ├── html_inline.py               # HTML inline style processing
+│   └── mixins/
+│       ├── __init__.py
+│       ├── document_converters.py
+│       ├── image_converters.py
+│       └── media_converters.py
 │
 ├── achievements/
-│   ├── achievements_system.py    # Achievement definitions and unlock logic
-│   ├── achievements_manager.py   # Persistence and state management
-│   ├── achievements_ui.py        # Full achievements panel UI
-│   ├── achievements_popup.py     # Animated real-time unlock pop-up
-│   └── rank_popup.py             # Rank-up celebration dialog
+│   ├── __init__.py
+│   ├── achievements_system.py       # Achievement definitions and unlock logic
+│   ├── achievements_manager.py      # Persistence and state management
+│   ├── achievements_ui.py           # Full achievements panel UI
+│   ├── achievements_popup.py        # Animated real-time unlock pop-up
+│   └── rank_popup.py               # Rank-up celebration dialog
 │
 ├── dialogs/
-│   ├── dialogs.py                # General-purpose dialogs
-│   ├── terms_dialog.py           # Terms & Privacy acceptance dialog
-│   └── word_to_pdf_dialog.py     # Word → PDF options dialog
+│   ├── __init__.py
+│   ├── batch_convert_dialog.py
+│   ├── batch_rename_dialog.py
+│   ├── compression_dialog.py
+│   ├── conversion_options_dialog.py
+│   ├── merge_order_dialog.py
+│   ├── password_dialog.py
+│   ├── pdf_protection_dialog.py
+│   ├── pdf_to_word_dialog.py
+│   ├── preview_dialog.py
+│   ├── settings_dialog.py
+│   ├── split_dialog.py
+│   ├── splash_screen.py
+│   ├── terms_dialog.py
+│   └── word_to_pdf_dialog.py
 │
 ├── tasks/
-│   ├── __init__.py               # Automation engine: Watch Folders and Scheduled Tasks
-│   ├── watcher.py                # Folder watcher — monitors paths for new files
-│   └── scheduler.py              # Task scheduler — triggers conversions on interval/time
+│   ├── __init__.py                  # Automation engine: Watch Folders & Scheduled Tasks
+│   ├── watcher.py                   # Folder watcher — monitors paths for new files
+│   └── scheduler.py                 # Task scheduler — triggers conversions on interval/time
+│
+├── templates/
+│   ├── __init__.py
+│   ├── create_template_dialog.py
+│   ├── template_editor_dialog.py
+│   ├── template_manager.py
+│   └── templates.py
+│
+├── utils/
+│   ├── __init__.py
+│   └── translation_mixin.py
 │
 ├── automation/
-│   └── *.toml                    # TOML rule configs for watcher & scheduler tasks
+│   └── example_automation.toml      # TOML rule configs for watcher & scheduler tasks
+│
+├── tests/
+│   ├── conftest.py
+│   ├── test_batch.py
+│   ├── test_compression.py
+│   ├── test_converter_edge.py
+│   ├── test_converters.py
+│   ├── test_dialogs.py
+│   ├── test_document_conversions.py
+│   ├── test_integration.py
+│   ├── test_mixins.py
+│   ├── test_templates.py
+│   ├── test_translations.py
+│   └── test_utils.py
 │
 ├── styles/
 │   └── themes/
+│       ├── buttons.qss              # Shared — BtnOK, BtnCancel, BtnCancelRed
+│       ├── advanced_conversions_buttons.qss
+│       ├── history_calendar.qss
+│       ├── history_date.qss
+│       ├── window_card.qss
 │       ├── dark/
-│       ├── light/
-│       ├── buttons.qss           # Shared — BtnOK, BtnCancel, BtnCancelRed
-│       └── *.qss / *.css
+│       │   ├── style.qss
+│       │   ├── advanced_conversions.qss
+│       │   ├── advanced_group.qss
+│       │   ├── contact_links.css
+│       │   ├── dashboard.qss
+│       │   ├── lang_scroll.qss
+│       │   ├── scrollbar.qss
+│       │   ├── templates.qss
+│       │   ├── terms.qss
+│       │   └── terms_html.css
+│       └── light/
+│           ├── style.qss
+│           ├── advanced_conversions.qss
+│           ├── advanced_group.qss
+│           ├── contact_links.css
+│           ├── dashboard.qss
+│           ├── lang_scroll.qss
+│           ├── scrollbar.qss
+│           ├── templates.qss
+│           ├── terms.qss
+│           └── terms_html.css
 │
-└── templates/
-    ├── templates.py              # Conversion template definitions
-    └── template_manager.py       # Save / load / apply templates</code>
+├── languages/
+│   ├── blank.lang
+│   ├── en-revisited.lang
+│   ├── en.json
+│   ├── fr.json
+│   ├── it.lang
+│   ├── ru.lang
+│   └── zh.lang
+│
+├── legal/
+│   ├── privacy_policy_{en,fr,it,ru,zh}.html
+│   └── terms_conditions_{en,fr,it,ru,zh}.html
+│
+├── LICENSE/
+│   ├── LICENSE.txt
+│   └── LICENSE_FR.txt
+│
+├── fonts/
+│   ├── Celestia-Silence.ttf
+│   └── Inter-Regular.ttf
+│
+├── icons/                           # 27 format/app icons (.ico, .png)
+│
+├── Assets/                          # 68 achievement/rank/event images (.png, .svg)
+│
+├── SFX/                             # 25 sound effects (.wav, .mp3)
+│
+├── previews/                        # 15 screenshots/GIFs for README
+│
+├── Output/
+│   └── FileConverterPro_Setup_v1.0.6.exe
+│
+├── build/                           # PyInstaller build intermediates
+├── dist/
+│   └── File Converter Pro/
+│       └── File Converter Pro.exe   # Bundled executable + _internal/
+│
+├── .github/
+│   ├── FUNDING.yml
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── workflows/
+│       └── oosmetrics.yml
+│
+├── pyproject.toml                   # Project metadata & dependencies
+├── requirements.txt                 # Pinned dependencies
+├── build.ps1 / build_all.ps1        # Build scripts
+├── build_installer.ps1              # Inno Setup build script
+├── build_quick_check.ps1
+├── build.spec / quick_check.spec    # PyInstaller specs
+├── setup.iss                        # Inno Setup installer script
+├── manifest.xml                     # Windows app manifest
+├── version_info.txt                 # Version resource info
+│
+├── icon.ico / icon.png              # App icons
+├── manager_icon.ico                 # Manager icon
+├── installer_banner.bmp             # Installer banner
+├── achievements.db                  # Runtime DB (achievements)
+├── file_converter_advanced.db       # Runtime DB (conversion stats)
+├── file_converter_stats.db          # Runtime DB (general stats)
+├── file_converter_config.dat        # Encrypted config file
+├── file_converter_key.key           # Encryption key
+├── special_events.db                # Runtime DB (events)
+│
+├── .gitignore
+├── README.md
+├── ROADMAP.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── COMMERCIAL_LICENSE.md
+└── LICENSE.md</code>
               <button class="copy-btn">Copy</button>
             </div>
 
