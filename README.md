@@ -1,6 +1,8 @@
-<p align="center"> <img src="images/logo.png" alt="File Converter Pro" width="110"/> </p>
+<p align="center">
+  <img src="images/logo.png" alt="File Converter Pro" width="110"/>
+</p>
 
-# File Converter Pro – Website
+<h1 align="center">File Converter Pro – Website</h1>
 
 The official website for [File Converter Pro](https://file-converter-pro.org/), a free offline file converter for Windows.
 
