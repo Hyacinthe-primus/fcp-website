@@ -7,7 +7,7 @@
   <meta name="description" content="Setup guide, supported formats, optional tools, troubleshooting and contributing guide for File Converter Pro.">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
@@ -19,8 +19,8 @@
       <div class="header-content">
         <div class="logo">
           <a href="index.html">
-            <img src="images/logo.png" alt="File Converter Pro" class="logo-img">
-            <span class="logo-text">File Converter Pro</span>
+            <img src="images/logo.png" alt="FC" class="logo-mark">
+            <span class="logo-text">File Converter Pro<em>built on a desk, not in a cloud</em></span>
           </a>
         </div>
         <button class="mobile-menu-toggle" aria-label="Toggle navigation" id="mobile-toggle">
@@ -46,13 +46,13 @@
     </div>
   </header>
 
-  <main id="main-content">
+<main id="main-content">
 
     <section class="page-hero">
       <div class="container">
         <p class="section-label">Documentation</p>
         <h1>Getting started</h1>
-        <p>Everything you need as a user or contributor.</p>
+        <p>Everything you need as a user or a contributor. No login wall, just the notes.</p>
       </div>
     </section>
 
@@ -89,11 +89,11 @@
           <div class="docs-content">
 
             <h2 id="install">Installation</h2>
-            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.6</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
+            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.7</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
             <p>The installer:</p>
             <ul>
               <li>Runs without administrator rights</li>
-              <li>Supports English and French during setup</li>
+              <li>Supports English, French, Italian, Simplified Chinese and Russian during setup</li>
               <li>Targets 64-bit Windows 10 / 11 only</li>
               <li>Optionally creates a Desktop shortcut</li>
               <li>Optionally associates <code>.fcproj</code> project files with the app</li>
@@ -102,17 +102,17 @@
 
             <h3>PowerShell one-liner (silent install)</h3>
             <div class="code-block">
-              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.6.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
+              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.7.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
               <button class="copy-btn">Copy</button>
             </div>
 
             <h2 id="portable">Portable version</h2>
-            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>File Converter Pro.exe</code>. All settings, history, and achievements are stored in the same folder, you can move the folder and everything moves with it.</p>
+            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>FCP.exe</code>. All settings, history, and achievements are stored in the same folder, you can move the folder and everything moves with it.</p>
             <div class="alert">The portable version does not create automatic file associations for <code>.fcproj</code> files. Open projects via <strong>File → Open Project</strong> inside the app.</div>
 
             <h3>PowerShell one-liner (portable)</h3>
             <div class="code-block">
-              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.6.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
+              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.7.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
               <button class="copy-btn">Copy</button>
             </div>
 
@@ -122,7 +122,7 @@
               <tbody>
                 <tr><td>OS</td><td>Windows 10 or 11 (64-bit)</td></tr>
                 <tr><td>RAM</td><td>4 GB min / 8 GB recommended</td></tr>
-                <tr><td>Disk</td><td>~300 MB free</td></tr>
+                <tr><td>Disk</td><td>~225 MB free</td></tr>
                 <tr><td>Display</td><td>1280 × 720 or higher</td></tr>
                 <tr><td>Dependencies</td><td>None – fully self-contained</td></tr>
               </tbody>
@@ -144,12 +144,12 @@
             <h2 id="defender">Windows Defender &amp; antivirus</h2>
             <p>Adding the install folder to Defender exclusions is strongly recommended. The installer offers to do this automatically. For the portable version:</p>
             <div class="code-block">
-              <code>Add-MpPreference -ExclusionPath "C:\Your\Folder\File Converter Pro"</code>
+              <code>Add-MpPreference -ExclusionPath "C:\Your\Folder\FCP"</code>
               <button class="copy-btn">Copy</button>
             </div>
             <p>If you get an <em>"application control policy blocked this file"</em> error, run this in an Administrator PowerShell, replacing the path with your actual install folder:</p>
             <div class="code-block">
-              <code>Get-ChildItem -Path "C:\Your\path\to\File Converter Pro" -Recurse | Unblock-File</code>
+              <code>Get-ChildItem -Path "C:\Your\Folder\FCP" -Recurse | Unblock-File</code>
               <button class="copy-btn">Copy</button>
             </div>
             <div class="alert warn">Adding a Defender exclusion and running Unblock-File are two separate mechanisms. Both may be needed if you downloaded the portable zip.</div>
@@ -187,6 +187,8 @@ python main.py</code>
 ├── quick_check.py                   # Companion build-verification tool (Tkinter)
 ├── daemon.py                        # Silent background daemon — watcher/scheduler tasks
 ├── qss_helpers.py                   # Shared QSS utilities
+├── external_binaries.py             # Centralized lookup of external tools (ffmpeg, Ghostscript…)
+├── theme_manager.py                 # Custom .fctheme theme handling (import, list, kind)
 │
 ├── app/
 │   ├── __init__.py                  # FadingMainWindow, FileConverterApp
@@ -197,14 +199,20 @@ python main.py</code>
 │       ├── archive_engines.py
 │       ├── batch.py
 │       ├── compression.py
+│       ├── epub_optimizer.py
 │       ├── file_management.py
+│       ├── image_optimizer.py
 │       ├── image_to_pdf.py
+│       ├── media_optimizer.py
+│       ├── office_optimizer.py
 │       ├── optimization.py
 │       ├── panels.py
 │       ├── pdf_operations.py
+│       ├── pdf_optimizer.py
 │       ├── pdf_to_word.py
 │       ├── project_management.py
 │       ├── theme_language.py
+│       ├── web_optimizer.py
 │       └── word_to_pdf.py
 │
 ├── context_menu/
@@ -216,12 +224,20 @@ python main.py</code>
 │   ├── __init__.py
 │   ├── converters.py                # AdvancedConverterEngine — all format pipelines
 │   ├── advanced_db.py               # SQLite DB for conversion stats
+│   ├── helpers.py                   # Shared conversion helpers (ConversionResult, dst builder)
 │   ├── html_inline.py               # HTML inline style processing
+│   ├── registry.py                  # Conversion type registry and dispatch table
 │   └── mixins/
 │       ├── __init__.py
 │       ├── document_converters.py
+│       ├── epub_renderers.py
+│       ├── html_renderers.py
 │       ├── image_converters.py
-│       └── media_converters.py
+│       ├── media_converters.py
+│       ├── office_com.py
+│       ├── pdf_renderers.py
+│       ├── pptx_native.py
+│       └── rtf_native.py
 │
 ├── achievements/
 │   ├── __init__.py
@@ -229,7 +245,7 @@ python main.py</code>
 │   ├── achievements_manager.py      # Persistence and state management
 │   ├── achievements_ui.py           # Full achievements panel UI
 │   ├── achievements_popup.py        # Animated real-time unlock pop-up
-│   └── rank_popup.py               # Rank-up celebration dialog
+│   └── rank_popup.py                # Rank-up celebration dialog
 │
 ├── dialogs/
 │   ├── __init__.py
@@ -267,16 +283,27 @@ python main.py</code>
 ├── automation/
 │   └── example_automation.toml      # TOML rule configs for watcher & scheduler tasks
 │
+├── config/
+│   └── external_binaries.conf       # Optional path overrides for external tools
+│
+│
 ├── tests/
 │   ├── conftest.py
+│   ├── test_achievements_db.py
+│   ├── test_achievements_isolation.py
+│   ├── test_architecture.py               # structural guards (mixins, i18n keys, QSS)
 │   ├── test_batch.py
 │   ├── test_compression.py
+│   ├── test_compression_fixes.py
 │   ├── test_converter_edge.py
+│   ├── test_converter_fallbacks.py
 │   ├── test_converters.py
 │   ├── test_dialogs.py
 │   ├── test_document_conversions.py
+│   ├── test_external_binaries.py
 │   ├── test_integration.py
 │   ├── test_mixins.py
+│   ├── test_project_tabs.py               # multi-project tab behavior + 5-tab limit
 │   ├── test_templates.py
 │   ├── test_translations.py
 │   └── test_utils.py
@@ -299,7 +326,7 @@ python main.py</code>
 │       │   ├── templates.qss
 │       │   ├── terms.qss
 │       │   └── terms_html.css
-│       └── light/
+│       ├── light/
 │           ├── style.qss
 │           ├── advanced_conversions.qss
 │           ├── advanced_group.qss
@@ -310,6 +337,7 @@ python main.py</code>
 │           ├── templates.qss
 │           ├── terms.qss
 │           └── terms_html.css
+│       └── custom_themes/           # Imported / bundled .fctheme themes (runtime-created)
 │
 ├── languages/
 │   ├── blank.lang
@@ -325,14 +353,10 @@ python main.py</code>
 │   └── terms_conditions_{en,fr,it,ru,zh}.html
 │
 ├── LICENSE/
-│   ├── LICENSE.txt
-│   └── LICENSE_FR.txt
 │
 ├── fonts/
-│   ├── Celestia-Silence.ttf
-│   └── Inter-Regular.ttf
 │
-├── icons/                           # 27 format/app icons (.ico, .png)
+├── icons/                           # 25 format/app icons (.ico, .png)
 │
 ├── Assets/                          # 68 achievement/rank/event images (.png, .svg)
 │
@@ -341,23 +365,16 @@ python main.py</code>
 ├── previews/                        # 15 screenshots/GIFs for README
 │
 ├── Output/
-│   └── FileConverterPro_Setup_v1.0.6.exe
+│   └── FileConverterPro_Setup_v1.0.7.exe
 │
 ├── build/                           # PyInstaller build intermediates
 ├── dist/
-│   └── File Converter Pro/
-│       └── File Converter Pro.exe   # Bundled executable + _internal/
-│
-├── .github/
-│   ├── FUNDING.yml
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   └── feature_request.md
-│   └── workflows/
-│       └── oosmetrics.yml
+│   └── FCP/
+│       └── FCP.exe                  # Bundled executable + _internal/
 │
 ├── pyproject.toml                   # Project metadata & dependencies
 ├── requirements.txt                 # Pinned dependencies
+├── requirements-dev.txt             # Dev/Build dependencies (pytest, PyInstaller)
 ├── build.ps1 / build_all.ps1        # Build scripts
 ├── build_installer.ps1              # Inno Setup build script
 ├── build_quick_check.ps1
@@ -368,13 +385,7 @@ python main.py</code>
 │
 ├── icon.ico / icon.png              # App icons
 ├── manager_icon.ico                 # Manager icon
-├── installer_banner.bmp             # Installer banner
-├── achievements.db                  # Runtime DB (achievements)
-├── file_converter_advanced.db       # Runtime DB (conversion stats)
-├── file_converter_stats.db          # Runtime DB (general stats)
-├── file_converter_config.dat        # Encrypted config file
-├── file_converter_key.key           # Encryption key
-├── special_events.db                # Runtime DB (events)
+├── installer_banner.png             # Installer banner
 │
 ├── .gitignore
 ├── README.md
@@ -397,7 +408,7 @@ python main.py</code>
               <thead><tr><th>Area</th><th>Details</th></tr></thead>
               <tbody>
                 <tr><td>Windows only</td><td>COM automation, registry-based dark mode detection, and PyInstaller packaging are Windows-first. macOS / Linux planned.</td></tr>
-                <tr><td>Build size</td><td>~435 MB compiled – inherent to Python + PySide6 + Matplotlib.</td></tr>
+                <tr><td>Build size</td><td>~225 MB compiled – inherent to Python + PySide6 + Matplotlib.</td></tr>
                 <tr><td>PDF → DOCX quality</td><td>Depends on source PDF. Scanned PDFs with no text layer are only partially recoverable.</td></tr>
                 <tr><td>.ppt legacy format</td><td>Requires Microsoft Office or LibreOffice. python-pptx cannot open old binary .ppt files.</td></tr>
                 <tr><td>No cloud / sync</td><td>History and settings are local only – no backup, no multi-device profiles.</td></tr>
@@ -408,10 +419,10 @@ python main.py</code>
             <h2 id="license">License</h2>
             <p>File Converter Pro uses a dual licensing model:</p>
             <ul>
-              <li><strong>GPLv3</strong> – free to use, modify, and distribute. See <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text" target="_blank" rel="noopener">LICENSE.txt</a>.</li>
-              <li><strong>Commercial License</strong> – required for integration into proprietary or closed-source products. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">COMMERCIAL LICENSE.md</a>.</li>
+              <li><strong>GPLv3</strong> – free to use, modify, and distribute. See <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text" target="_blank" rel="noopener">LICENSE</a>.</li>
+              <li><strong>Commercial License</strong> – required for integration into proprietary or closed-source products. See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/COMMERCIAL_LICENSE.md" target="_blank" rel="noopener">COMMERCIAL LICENSE</a>.</li>
             </ul>
-            <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). All rights reserved.</p>
+            <p>&copy; <span data-fcp-year></span> Prime Enterprises. All rights reserved.</p>
 
           </div>
         </div>
@@ -425,11 +436,11 @@ python main.py</code>
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <div class="footer-logo">
-            <img src="images/logo.png" alt="File Converter Pro" class="footer-logo-img">
+            <img src="images/logo.png" alt="FC" class="logo-mark" style="height:32px;">
             <span>File Converter Pro</span>
           </div>
           <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
-          <p class="footer-tagline"><em>Because file conversion should actually feel good.</em></p>
+          <p class="footer-tagline">Because file conversion should actually feel good.</p>
           <div class="footer-social">
             <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
             <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
@@ -465,9 +476,9 @@ python main.py</code>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span data-fcp-year></span> Prime Enterprises (Hyacinthe). Licensed under GPLv3 / Commercial.</p>
+        <p>&copy; <span data-fcp-year></span> Prime Enterprises. Licensed under GPLv3 / Commercial.</p>
         <div class="footer-badges">
-          <span class="badge-pill">v<span data-fcp="version">1.0.6</span></span>
+          <span class="badge-pill">v<span data-fcp="version">1.0.7</span></span>
           <span class="badge-pill">Windows 10/11</span>
           <span class="badge-pill">Free forever</span>
         </div>
