@@ -30,7 +30,7 @@ The website provides information about the application, its features, documentat
 | **CSS3** | Styling and responsive design |
 | **Vanilla JavaScript** | Interactivity |
 | **Font Awesome 6.4** | Icons |
-| **Google Fonts** | DM Sans & DM Mono |
+| **Google Fonts** | Archivo Black, Libre Franklin & Space Mono |
 | **GitHub Pages** | Deployment |
 
 ## Pages
