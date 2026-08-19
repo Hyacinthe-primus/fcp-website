@@ -7,58 +7,58 @@
     <meta name="description" content="Privacy Policy for File Converter Pro — a 100% offline application that never collects your data.">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script>(function(){const t=localStorage.getItem('fcp-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
         /* ── Theme variables (mirrors site style.css) ── */
         :root,
         [data-theme="dark"] {
-            --bg:          #1e1e1e;
-            --bg-2:        #252526;
-            --bg-card:     #2d2d2d;
-            --bg-card-2:   #333333;
-            --border:      rgba(255,255,255,0.08);
-            --border-2:    rgba(255,255,255,0.15);
-            --text:        #d4d4d4;
-            --text-muted:  #9d9d9d;
-            --text-dim:    #6b6b6b;
-            --accent:      #4dabf7;
-            --accent-2:    #74c0fc;
-            --accent-glow: rgba(77,171,247,0.18);
-            --green:       #4ec994;
-            --orange:      #ce9178;
-            --red:         #f47067;
-            --yellow:      #ffc107;
-            --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
-            --radius:      6px;
-            --radius-lg:   12px;
-            --transition:  0.22s ease;
-            --font-body:   'DM Sans', system-ui, sans-serif;
-            --font-mono:   'DM Mono', 'Fira Code', monospace;
+            --bg:          #1b1712;
+            --bg-2:        #241f18;
+            --bg-card:     #26201a;
+            --bg-card-2:   #302921;
+            --border:      rgba(237,228,211,0.14);
+            --border-2:    rgba(237,228,211,0.34);
+            --text:        #ede4d3;
+            --text-muted:  #b8ab94;
+            --text-dim:    #7d735f;
+            --accent:      #75a8d6;
+            --accent-2:    #8fbde3;
+            --accent-glow: rgba(117,168,214,0.14);
+            --green:       #86b473;
+            --orange:      #caa438;
+            --red:         #22bbf9;
+            --yellow:      #caa438;
+            --shadow-card: 4px 4px 0 rgba(0,0,0,0.85);
+            --radius:      2px;
+            --radius-lg:   2px;
+            --transition:  0.15s ease;
+            --font-body:   'Libre Franklin', system-ui, sans-serif;
+            --font-mono:   'Space Mono', 'Courier New', monospace;
         }
         [data-theme="light"] {
-            --bg:          #ffffff;
-            --bg-2:        #f3f6fb;
-            --bg-card:     #ffffff;
-            --bg-card-2:   #e8f0fb;
-            --border:      rgba(26,127,212,0.12);
-            --border-2:    rgba(26,127,212,0.22);
-            --text:        #0f1117;
-            --text-muted:  #3b4a63;
-            --text-dim:    #8494ae;
-            --accent:      #1a7fd4;
-            --accent-2:    #3a9ff5;
-            --accent-glow: rgba(26,127,212,0.16);
-            --green:       #1a7a3c;
-            --orange:      #a85c00;
-            --red:         #b83232;
-            --yellow:      #b88a00;
-            --shadow-card: 0 1px 3px rgba(26,127,212,0.07), 0 4px 16px rgba(26,127,212,0.06);
-            --radius:      6px;
-            --radius-lg:   12px;
-            --transition:  0.22s ease;
-            --font-body:   'DM Sans', system-ui, sans-serif;
-            --font-mono:   'DM Mono', 'Fira Code', monospace;
+            --bg:          #f3ede0;
+            --bg-2:        #e9dfc8;
+            --bg-card:     #faf6ec;
+            --bg-card-2:   #f3ecd9;
+            --border:      rgba(32,28,22,0.16);
+            --border-2:    rgba(32,28,22,0.42);
+            --text:        #201c16;
+            --text-muted:  #5c5344;
+            --text-dim:    #8c8171;
+            --accent:      #2c5478;
+            --accent-2:    #1f3e5c;
+            --accent-glow: rgba(44,84,120,0.10);
+            --green:       #46613c;
+            --orange:      #b5311a;
+            --red:         #0f7fb8;
+            --yellow:      #8a6d1f;
+            --shadow-card: 4px 4px 0 rgba(32,28,22,0.9);
+            --radius:      2px;
+            --radius-lg:   2px;
+            --transition:  0.15s ease;
+            --font-body:   'Libre Franklin', system-ui, sans-serif;
+            --font-mono:   'Space Mono', 'Courier New', monospace;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -81,14 +81,13 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: var(--bg-2);
-            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            border-bottom: 2px solid var(--text);
             padding: .75rem 1.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
-            backdrop-filter: blur(8px);
         }
         .topbar-left {
             display: flex;
@@ -110,8 +109,8 @@
 
         .theme-toggle {
             background: var(--bg-card);
-            border: 1px solid var(--border-2);
-            border-radius: var(--radius);
+            border: 2px solid var(--border-2);
+            border-radius: 50%;
             padding: .4rem .65rem;
             cursor: pointer;
             color: var(--text-muted);
@@ -135,10 +134,13 @@
 
         /* ── Typography ── */
         h1 {
-            font-size: 2rem;
-            font-weight: 700;
+            font-family: 'Archivo Black', 'Arial Black', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
             color: var(--text);
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 3px solid var(--red);
             padding-bottom: .75rem;
             margin-bottom: 1.5rem;
         }
@@ -168,8 +170,8 @@
         .highlight-box {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-left: 4px solid var(--yellow);
-            border-radius: 0 var(--radius) var(--radius) 0;
+            border-left: 4px solid var(--red);
+            border-radius: 0;
             padding: 1rem 1.25rem;
             margin: 1.5rem 0;
             display: flex;
@@ -316,7 +318,7 @@
 
         <hr>
         <div class="doc-footer">
-            <p>© 2026 Prime Enterprises (Hyacinthe) — All rights reserved</p>
+            <p>© 2026 Prime Enterprises — All rights reserved</p>
             <em>This application is designed with respect for your privacy.</em>
         </div>
 
