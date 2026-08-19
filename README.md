@@ -35,4 +35,4 @@ python -m http.server 8000
 
 ## License
 
-Copyright Prime Enterprises (Hyacinthe). All rights reserved.
+Copyright Prime Enterprises. All rights reserved.
