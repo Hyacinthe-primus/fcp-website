@@ -71,4 +71,6 @@ http://localhost:8000
 
 ## License
 
-Copyright **Prime Enterprises**. All rights reserved.
+Licensed under the **GNU General Public License v3.0** (GPLv3). See the full license text at [gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html#license-text).
+
+&copy; **Prime Enterprises**.
