@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Features - File Converter Pro</title>
-  <meta name="description" content="Explore every feature: batch conversion, statistics dashboard, achievements, dark/light mode, context menu integration and more.">
+  <meta name="description" content="Explore every feature: OCR, automation, custom themes, batch conversion, statistics dashboard, achievements, context menu integration and more.">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -68,10 +68,11 @@
             <h2>All-in-One Conversion</h2>
             <p>Documents, images, audio, video, all handled from one window. No juggling five different tools or ten browser tabs. Batch mode works across every category; drop as many files as you need.</p>
             <ul class="feature-benefits">
-              <li><i class="fas fa-check-circle"></i> Documents: TXT, RTF, CSV, JSON, XLSX, PPTX, HTML, PDF, EPUB</li>
-              <li><i class="fas fa-check-circle"></i> Images: 13+ output formats including AVIF, HEIC, ICO, DNG</li>
-              <li><i class="fas fa-check-circle"></i> Audio &amp; Video via FFmpeg</li>
-              <li><i class="fas fa-check-circle"></i> Batch conversions supported across all types</li>
+              <li><i class="fas fa-check-circle"></i> Documents: TXT, RTF, ODT, ODS, ODP, CSV, JSON, XLSX, PPTX, HTML, Markdown, PDF, EPUB</li>
+              <li><i class="fas fa-check-circle"></i> Images: broad input support with PNG, JPEG, AVIF, ICO, SVG, PSD, J2K and more</li>
+              <li><i class="fas fa-check-circle"></i> OCR: images and scans become searchable PDFs with optional custom orientation</li>
+              <li><i class="fas fa-check-circle"></i> Audio &amp; Video with a separately installed FFmpeg</li>
+              <li><i class="fas fa-check-circle"></i> Batch conversion targets PDF, DOCX, and PNG with per-file error reporting</li>
             </ul>
           </div>
           <div class="feature-visual"><img src="images/features/all-in-one.png" alt="All-in-One Conversion"></div>
@@ -85,7 +86,9 @@
               <li><i class="fas fa-check-circle"></i> Zero network activity during conversion</li>
               <li><i class="fas fa-check-circle"></i> No account, no registration</li>
               <li><i class="fas fa-check-circle"></i> Encrypted local settings (Fernet)</li>
+              <li><i class="fas fa-check-circle"></i> Optional backup copy before conversion</li>
               <li><i class="fas fa-check-circle"></i> SQLite-backed local history only</li>
+              <li><i class="fas fa-check-circle"></i> Temporary files cleaned up automatically</li>
             </ul>
           </div>
           <div class="feature-visual"><img src="images/features/offline.png" alt="100% Offline"></div>
@@ -99,6 +102,8 @@
               <li><i class="fas fa-check-circle"></i> Works on a clean machine with zero extras installed</li>
               <li><i class="fas fa-check-circle"></i> Automatically upgrades quality when you install optional tools</li>
               <li><i class="fas fa-check-circle"></i> PPTX→PDF: PowerPoint COM › LibreOffice CLI › python-pptx+ReportLab</li>
+              <li><i class="fas fa-check-circle"></i> ODT/ODS/ODP→Office: Office COM › LibreOffice › native zip/XML fallback</li>
+              <li><i class="fas fa-check-circle"></i> ODT/ODS/ODP→PDF: Office COM › LibreOffice</li>
               <li><i class="fas fa-check-circle"></i> HTML→PDF: wkhtmltopdf › WeasyPrint › ReportLab</li>
             </ul>
           </div>
@@ -110,12 +115,12 @@
         <div class="feature-detail reverse">
           <div class="feature-detail-content">
             <h2>Statistics Dashboard</h2>
-            <p>A full Matplotlib-powered analytics panel with animated charts showing your conversion history at a glance. Filter by date, export to CSV, JSON, or PDF.</p>
+            <p>A full Matplotlib-powered analytics panel with animated charts showing your conversion history at a glance. Filter by date and export the dashboard to CSV or JSON; the separate History window also supports Print to PDF and JSON export.</p>
             <ul class="feature-benefits">
               <li><i class="fas fa-check-circle"></i> Animated bar chart – conversions per day</li>
               <li><i class="fas fa-check-circle"></i> Animated filled line chart – data volume over time</li>
               <li><i class="fas fa-check-circle"></i> Animated donut chart – operation type breakdown</li>
-              <li><i class="fas fa-check-circle"></i> Filterable history table with CSV / JSON / PDF export</li>
+              <li><i class="fas fa-check-circle"></i> Dashboard CSV/JSON export, with Print to PDF and JSON export in History</li>
             </ul>
           </div>
           <div class="feature-visual feature-visual--lg"><img src="images/features/dashboard.png" alt="Statistics Dashboard"></div>
@@ -151,16 +156,33 @@
 
         <div class="feature-detail">
           <div class="feature-detail-content">
-            <h2>Polished UI &amp; Special Events</h2>
-            <p>Automatic dark/light mode reading directly from the Windows registry. Animated splash screen with a crossfade into the main window, plus date-aware special events.</p>
+            <h2>Automation &amp; Frequent-Config Templates</h2>
+            <p>Point FCP at a folder or give it a schedule and it keeps converting in the background. Configurations you reuse often can become automatic templates, so the setup is already there next time.</p>
+            <ul class="feature-benefits">
+              <li><i class="fas fa-check-circle"></i> Watch folders convert new files automatically</li>
+              <li><i class="fas fa-check-circle"></i> Scheduled tasks run at an interval or a specific time</li>
+              <li><i class="fas fa-check-circle"></i> OCR rules produce searchable PDFs in the background</li>
+              <li><i class="fas fa-check-circle"></i> Configs used three times become <code>[Auto]</code> templates</li>
+            </ul>
+          </div>
+          <div class="feature-visual"><img src="images/features/automation.png" alt="Automation and scheduled conversions"></div>
+        </div>
+
+        <div class="feature-detail reverse">
+          <div class="feature-detail-content">
+            <h2>Polished UI, Custom Themes &amp; Special Events</h2>
+            <p>Automatic dark/light mode reading directly from the Windows registry. Go further with community <code>.fctheme</code> packs: install one from Settings, and the whole app restyles instantly. Animated splash screen and date-aware special events are still included.</p>
             <ul class="feature-benefits">
               <li><i class="fas fa-check-circle"></i> Glassmorphism stat cards and fluid transitions</li>
+              <li><i class="fas fa-check-circle"></i> Themeable dialogs, splash screen and Quick Convert window</li>
+              <li><i class="fas fa-check-circle"></i> Searchable Quick Launch picker with keyboard navigation</li>
+              <li><i class="fas fa-check-circle"></i> Browse and install themes from the <a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener">FCP Themes</a> gallery</li>
               <li><i class="fas fa-check-circle"></i> Single-instance: a second launch focuses the running window</li>
               <li><i class="fas fa-check-circle"></i> Native Windows toast notifications on conversion finish</li>
               <li><i class="fas fa-check-circle"></i> Drag files directly onto the <code>.exe</code> to pre-load them</li>
             </ul>
           </div>
-          <div class="feature-visual"><img src="images/features/ui.gif" alt="Polished UI"></div>
+          <div class="feature-visual"><img src="images/features/ui.gif" alt="Polished UI and custom themes"></div>
         </div>
 
       </div>
@@ -208,8 +230,9 @@
           <h4>Project</h4>
           <ul>
             <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki" target="_blank" rel="noopener">Wiki</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki" target="_blank" rel="noopener" data-fcp-href="wikiUrl">Wiki</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener" data-fcp-href="themesUrl">Themes</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-fcp-href="contributingUrl">Contributing</a></li>
             <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
           </ul>
         </div>
@@ -218,14 +241,14 @@
           <ul>
             <li><a href="legal/privacy_policy_en.html">Privacy Policy</a></li>
             <li><a href="legal/terms_conditions_en.html">Terms of Use</a></li>
-            <li><a href="https://www.gnu.org/licenses/gpl-3.0.fr.html#license-text" target="_blank" rel="noopener">GPLv3 License</a></li>
+            <li><a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text" target="_blank" rel="noopener">GPLv3 License</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; <span data-fcp-year></span> Prime Enterprises. Licensed under GPLv3.</p>
         <div class="footer-badges">
-          <span class="badge-pill">v<span data-fcp="version">1.0.7</span></span>
+          <span class="badge-pill">v<span data-fcp="version">1.0.8</span></span>
           <span class="badge-pill">Windows 10/11</span>
           <span class="badge-pill">Free forever</span>
         </div>

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Converter Pro - Free Offline File Converter for Windows</title>
-  <meta name="description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. Free forever for Windows 10/11.">
+  <meta name="description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. OCR, automation and custom themes. Free for Windows 10/11.">
   <link rel="canonical" href="https://file-converter-pro.org/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://file-converter-pro.org/" />
   <meta property="og:title" content="File Converter Pro - Free Offline File Converter for Windows" />
-  <meta property="og:description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. Free forever for Windows 10/11." />
+  <meta property="og:description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. OCR, automation and custom themes. Free for Windows 10/11." />
   <meta property="og:image" content="https://raw.githubusercontent.com/Hyacinthe-primus/fcp-website/main/images/social-preview.png" />
   <meta property="og:site_name" content="File Converter Pro" />
 
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://file-converter-pro.org/" />
   <meta name="twitter:title" content="File Converter Pro - Free Offline File Converter for Windows" />
-  <meta name="twitter:description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. Free forever for Windows 10/11." />
+  <meta name="twitter:description" content="Convert documents, images, audio, and video — 100% offline, no uploads, no limits. OCR, automation and custom themes. Free for Windows 10/11." />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/Hyacinthe-primus/fcp-website/main/images/social-preview.png" />
 
   <!-- SEO -->
@@ -40,8 +40,9 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "featureList": [
       "100% offline conversion", "No file size limits", "No uploads required",
-      "Document conversion (PDF, DOCX, TXT, etc.)", "Image conversion (PNG, JPG, WebP, BMP, etc.)",
-      "Audio conversion (MP3, WAV, FLAC, etc.)", "Video conversion (MP4, MKV, AVI, etc.)", "Free forever"
+      "Document conversion (PDF, DOCX, ODT, Markdown, etc.)", "Image conversion (PNG, JPG, WebP, AVIF, SVG, etc.)",
+      "Audio conversion (MP3, WAV, FLAC, etc.)", "Video conversion (MP4, MKV, AVI, etc.)",
+      "OCR to searchable PDF", "Watch folders and scheduled tasks", "Custom community themes", "Free forever"
     ]
   }
   </script>
@@ -96,7 +97,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <div class="hero-label fade-up fade-up-1">v<span data-fcp="version">1.0.7</span> — still free, still one person</div>
+            <div class="hero-label fade-up fade-up-1">v<span data-fcp="version">1.0.8</span> — still free, still one person</div>
             <h1 class="hero-title fade-up fade-up-2">
               Convert anything.
               <span class="line-accent">Offline, obviously.</span>
@@ -154,7 +155,7 @@
             <span>Works with the Wi-Fi off</span>
           </div>
           <div class="trust-item"><i class="fas fa-infinity"></i> <span>No file size limits</span></div>
-          <div class="trust-item"><i class="fas fa-download"></i> <strong><span id="dl-count">669</span>+ downloads</strong></div>
+          <div class="trust-item"><i class="fas fa-download"></i> <strong><span id="dl-count">4,568</span>+ downloads</strong></div>
           <div class="trust-item"><i class="fab fa-github"></i> <span>Open source on GitHub</span></div>
         </div>
       </div>
@@ -177,13 +178,28 @@
           </div>
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-            <h3>Batch Processing</h3>
-            <p>Drop an entire folder and convert everything at once. Built for the day you have 30 PNGs that all need to become JPEGs.</p>
+            <h3>Batch Conversion</h3>
+            <p>Batch targets PDF, DOCX, and PNG with format-aware routing and per-file failure reporting. Built for the day you have 30 files that all need the same output.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-font"></i></div>
+            <h3>OCR &amp; Searchable PDFs</h3>
+            <p>Turn scans and images into PDFs with a selectable text layer. Works in batches and in automated jobs too.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-robot"></i></div>
+            <h3>Watch Folders &amp; Schedules</h3>
+            <p>Auto-convert files dropped into a folder, or run recurring conversions on a schedule in the background.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-adjust"></i></div>
             <h3>Auto Dark / Light Mode</h3>
             <p>Reads your Windows theme and switches instantly. Matches whatever you've already got on, no toggle needed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-palette"></i></div>
+            <h3>Custom Themes</h3>
+            <p>Install community <code>.fctheme</code> packs or build your own. Browse the <a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener">FCP Themes</a> gallery.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
@@ -213,7 +229,7 @@
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-globe"></i></div>
             <h3>Multi-Language</h3>
-            <p>Ships with French and English. Add any other language by dropping a <code>.lang</code> JSON file — no coding required.</p>
+            <p>Ships with English, French, Turkish, Italian, Russian and Simplified Chinese. Add any other language with a <code>.lang</code> JSON file — no coding required.</p>
           </div>
         </div>
       </div>
@@ -238,6 +254,8 @@
           <div class="formats-list">
             <span class="format-tag">TXT</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">DOCX</span>
             <span class="format-tag">RTF</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">DOCX</span>
+            <span class="format-tag">ODT</span><span class="format-tag">ODS</span><span class="format-tag">ODP</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">DOCX</span><span class="format-tag">XLSX</span><span class="format-tag">PPTX</span>
+            <span class="format-tag">MD</span><span class="format-tag arrow">→</span><span class="format-tag">HTML</span><span class="format-tag">PDF</span>
             <span class="format-tag">CSV</span><span class="format-tag arrow">→</span><span class="format-tag">JSON</span>
             <span class="format-tag">JSON</span><span class="format-tag arrow">→</span><span class="format-tag">CSV</span>
             <span class="format-tag">XLSX</span><span class="format-tag arrow">→</span><span class="format-tag">PDF</span><span class="format-tag">JSON</span><span class="format-tag">CSV</span>
@@ -253,10 +271,9 @@
             <span class="format-tag">PNG</span><span class="format-tag">JPEG</span><span class="format-tag">JPG</span>
             <span class="format-tag">WEBP</span><span class="format-tag">AVIF</span><span class="format-tag">BMP</span>
             <span class="format-tag">TIFF</span><span class="format-tag">ICO</span><span class="format-tag">SVG</span>
-            <span class="format-tag">HEIC</span><span class="format-tag">PSD</span><span class="format-tag">DNG</span>
-            <span class="format-tag">J2K</span>
+            <span class="format-tag">PSD</span><span class="format-tag">J2K</span>
           </div>
-          <p style="margin-top:.9rem;font-size:.85rem;">All conversions go through Pillow at maximum quality, EXIF metadata preserved.</p>
+          <p style="margin-top:.9rem;font-size:.85rem;">HEIC/HEIF and RAW camera formats are supported as inputs. HEIC and DNG output require additional plugins and are unavailable in the bundled build. PSD output requires ImageMagick. OCR turns images into searchable PDFs.</p>
         </div>
         <div id="tab-audio" class="tab-content">
           <div class="formats-list">
@@ -264,7 +281,7 @@
             <span class="format-tag">MP3</span><span class="format-tag">WAV</span><span class="format-tag">AAC</span>
             <span class="format-tag">OGG</span><span class="format-tag">FLAC</span><span class="format-tag">M4A</span>
           </div>
-          <p style="margin-top:.9rem;font-size:.85rem;">Powered by FFmpeg. Needs FFmpeg installed on your machine — FCP detects it automatically.</p>
+          <p style="margin-top:.9rem;font-size:.85rem;">FFmpeg is required for audio and video conversions and is detected automatically when installed separately. Document and image conversions work without it.</p>
         </div>
         <div id="tab-video" class="tab-content">
           <div class="formats-list">
@@ -272,7 +289,7 @@
             <span class="format-tag">MP4</span><span class="format-tag">WEBM</span><span class="format-tag">MOV</span>
             <span class="format-tag">MKV</span><span class="format-tag">AVI</span>
           </div>
-          <p style="margin-top:.9rem;font-size:.85rem;">Powered by FFmpeg. Needs FFmpeg installed on your machine — FCP detects it automatically.</p>
+          <p style="margin-top:.9rem;font-size:.85rem;">FFmpeg is required for audio and video conversions and is detected automatically when installed separately. Document and image conversions work without it.</p>
         </div>
       </div>
     </section>
@@ -414,7 +431,7 @@
         <p>One download. No account. No expiry. Runs on your machine for as long as you want it to.</p>
         <div class="cta-actions">
           <a href="download.html" class="btn btn-primary btn-lg">
-            <i class="fab fa-windows"></i> Download Free — v<span data-fcp="version">1.0.7</span>
+            <i class="fab fa-windows"></i> Download Free — v<span data-fcp="version">1.0.8</span>
           </a>
           <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" class="btn btn-outline btn-lg" target="_blank" rel="noopener" data-fcp-href="githubUrl">
             <i class="fab fa-github"></i> View on GitHub
@@ -454,8 +471,9 @@
           <h4>Project</h4>
           <ul>
             <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki" target="_blank" rel="noopener">Wiki</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki" target="_blank" rel="noopener" data-fcp-href="wikiUrl">Wiki</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener" data-fcp-href="themesUrl">Themes</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-fcp-href="contributingUrl">Contributing</a></li>
             <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
           </ul>
         </div>
@@ -464,14 +482,14 @@
           <ul>
             <li><a href="legal/privacy_policy_en.html">Privacy Policy</a></li>
             <li><a href="legal/terms_conditions_en.html">Terms of Use</a></li>
-            <li><a href="https://www.gnu.org/licenses/gpl-3.0.fr.html#license-text" target="_blank" rel="noopener">GPLv3 License</a></li>
+            <li><a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text" target="_blank" rel="noopener">GPLv3 License</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; <span data-fcp-year></span> Prime Enterprises. Licensed under GPLv3.</p>
         <div class="footer-badges">
-          <span class="badge-pill">v<span data-fcp="version">1.0.7</span></span>
+          <span class="badge-pill">v<span data-fcp="version">1.0.8</span></span>
           <span class="badge-pill">Windows 10/11</span>
           <span class="badge-pill">Free forever</span>
         </div>

@@ -22,6 +22,8 @@ This repository contains the official website of **File Converter Pro**.
 
 The website provides information about the application, its features, documentation, roadmap, and download options.
 
+Version numbers, download URLs and shared project links are centralized in [`js/config.js`](js/config.js), so a release only needs the version and asset URLs updated there.
+
 ## Tech Stack
 
 | Technology | Usage |
@@ -67,6 +69,8 @@ http://localhost:8000
 
 - **Website:** [file-converter-pro.org](https://file-converter-pro.org/)
 - **App Source Code:** [GitHub](https://github.com/Hyacinthe-primus/File_Converter_Pro)
+- **Wiki:** [File Converter Pro Wiki](https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki)
+- **Themes:** [FCP Themes](https://github.com/Hyacinthe-primus/FCP-themes)
 - **Support:** [Ko-fi](https://ko-fi.com/hyacinthe_primus/goal?g=0)
 
 ## License
