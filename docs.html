@@ -90,7 +90,7 @@
           <div class="docs-content">
 
             <h2 id="install">Installation</h2>
-            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.8</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
+            <p>Download the latest <strong>FileConverterPro_Setup_v<span data-fcp="version">1.0.8</span>.exe</strong> from the <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/releases" target="_blank" rel="noopener">Releases page</a> and run it.</p>
             <p>The installer:</p>
             <ul>
               <li>Runs without administrator rights</li>
@@ -103,17 +103,17 @@
 
             <h3>PowerShell one-liner (silent install)</h3>
             <div class="code-block">
-              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
+              <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
               <button class="copy-btn">Copy</button>
             </div>
 
             <h2 id="portable">Portable version</h2>
-            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>FCP.exe</code>. All settings, history, and achievements are stored in the same folder, you can move the folder and everything moves with it.</p>
+            <p>Download the <code>.zip</code> from the <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/releases" target="_blank" rel="noopener">Releases page</a>, extract anywhere, and run <code>FCP.exe</code>. All settings, history, and achievements are stored in the same folder, you can move the folder and everything moves with it.</p>
             <div class="alert">The portable version does not create automatic file associations for <code>.fcproj</code> files. Open projects via <strong>File → Open Project</strong> inside the app.</div>
 
             <h3>PowerShell one-liner (portable)</h3>
             <div class="code-block">
-              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
+              <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
               <button class="copy-btn">Copy</button>
             </div>
 
@@ -161,16 +161,16 @@
 
             <h2 id="i18n">Languages</h2>
             <p>FCP ships with English, French, Turkish, Italian, Russian and Simplified Chinese. To add another language, create a <code>.lang</code> file (UTF-8 JSON) and place it in the <code>languages/</code> folder (<code>_internal/languages/</code> in the installed build, or <code>src/languages/</code> from source). It appears in Settings on the next launch.</p>
-            <p>See <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> for a step-by-step guide.</p>
+            <p>See <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> for a step-by-step guide.</p>
 
             <h2 id="themes">Custom themes</h2>
             <p>FCP includes Dark and Light themes and supports community <code>.fctheme</code> packs. Install one from <strong>Settings → Themes → Install a theme (.fctheme)</strong>, or browse the <a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener">FCP Themes repository</a>.</p>
-            <p>To build or submit a theme, follow the repository's <a href="https://github.com/Hyacinthe-primus/FCP-themes/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a>; the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki/Themes" target="_blank" rel="noopener">Themes wiki page</a> is the short version. Imported themes live in <code>_internal/styles/custom_themes/</code> in the installed build, or <code>src/styles/custom_themes/</code> from source.</p>
+            <p>To build or submit a theme, follow the repository's <a href="https://github.com/Hyacinthe-primus/FCP-themes/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a>; the <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki/Themes" target="_blank" rel="noopener">Themes wiki page</a> is the short version. Imported themes live in <code>_internal/styles/custom_themes/</code> in the installed build, or <code>src/styles/custom_themes/</code> from source.</p>
 
             <h2 id="clone">Clone &amp; install</h2>
             <div class="code-block">
-              <code>git clone https://github.com/Hyacinthe-primus/File_Converter_Pro.git
-cd File_Converter_Pro
+              <code>git clone https://github.com/Hyacinthe-primus/File-Converter-Pro.git
+cd File-Converter-Pro
 pip install -r requirements.txt
 python src/main.py</code>
               <button class="copy-btn">Copy</button>
@@ -178,13 +178,13 @@ python src/main.py</code>
             <p>Requires Python 3.10 or 3.13.</p>
 
             <h2 id="structure">Project structure</h2>
-            <p>See the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki/Directory-Tree" target="_blank" rel="noopener">Directory Tree</a> on the project wiki for the current source layout, packaging files, tests, and runtime-generated files.</p>
+            <p>See the <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki/Directory-Tree" target="_blank" rel="noopener">Directory Tree</a> on the project wiki for the current source layout, packaging files, tests, and runtime-generated files.</p>
 
             <h2 id="build">Building the exe</h2>
-            <p>The project uses PyInstaller for the executable and Inno Setup for the installer. See the <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki/For-Developers#building-the-exe" target="_blank" rel="noopener">For Developers</a> wiki page for the full build guide. The main build auto-detects UPX from PATH; `build_all.ps1` also creates the portable ZIP and SHA-256 checksums in <code>Output/</code> using 7-Zip. Be careful with UPX and Qt DLLs, as improper usage can corrupt them.</p>
+            <p>The project uses PyInstaller for the executable and Inno Setup for the installer. See the <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki/For-Developers#building-the-exe" target="_blank" rel="noopener">For Developers</a> wiki page for the full build guide. The main build auto-detects UPX from PATH; `build_all.ps1` also creates the portable ZIP and SHA-256 checksums in <code>Output/</code> using 7-Zip. Be careful with UPX and Qt DLLs, as improper usage can corrupt them.</p>
 
             <h2 id="contributing">Contributing</h2>
-            <p>Contributions are welcome: Translations, Bug fixes, or larger features. Read <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> first. For complex changes (Linux port, new format category), open an issue before starting work.</p>
+            <p>Contributions are welcome: Translations, Bug fixes, or larger features. Read <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a> first. For complex changes (Linux port, new format category), open an issue before starting work.</p>
 
             <h2 id="known-limits">Known limitations</h2>
             <table class="req-table">
@@ -223,7 +223,7 @@ python src/main.py</code>
           <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
           <p class="footer-tagline">Because file conversion should actually feel good.</p>
           <div class="footer-social">
-            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
             <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
             <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" aria-label="Ko-fi" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i></a>
           </div>
@@ -240,10 +240,10 @@ python src/main.py</code>
         <div class="footer-col">
           <h4>Project</h4>
           <ul>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki" target="_blank" rel="noopener" data-fcp-href="wikiUrl">Wiki</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File-Converter-Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki" target="_blank" rel="noopener" data-fcp-href="wikiUrl">Wiki</a></li>
             <li><a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener" data-fcp-href="themesUrl">Themes</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-fcp-href="contributingUrl">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-fcp-href="contributingUrl">Contributing</a></li>
             <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
           </ul>
         </div>

@@ -179,7 +179,7 @@ function animateCount(el, target, duration) {
 
 const countEl = document.getElementById('dl-count');
 if (countEl) {
-    fetch('https://api.github.com/repos/Hyacinthe-primus/File_Converter_Pro/releases', {
+    fetch('https://api.github.com/repos/Hyacinthe-primus/File-Converter-Pro/releases', {
         headers: { 'Accept': 'application/vnd.github+json' }
     })
     .then(r => r.json())

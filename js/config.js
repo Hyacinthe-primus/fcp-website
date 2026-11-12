@@ -1,14 +1,14 @@
 const FCP = {
   version: "1.0.8",
   currentYear: new Date().getFullYear(),
-  githubUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro",
-  githubReadmeUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/README.md",
-  wikiUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki",
+  githubUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro",
+  githubReadmeUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/README.md",
+  wikiUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki",
   themesUrl: "https://github.com/Hyacinthe-primus/FCP-themes",
-  contributingUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md",
-  releaseUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest",
-  installerUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe",
-  portableUrl: "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip",
+  contributingUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/CONTRIBUTING.md",
+  releaseUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest",
+  installerUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe",
+  portableUrl: "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip",
   kofiUrl: "https://ko-fi.com/hyacinthe_primus/goal?g=0",
   itchioUrl: "https://hyacinthe-primus.itch.io/file-converter-pro",
 };
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dlCountEls = document.querySelectorAll("#dl-count");
   if (dlCountEls.length) {
-    fetch("https://api.github.com/repos/Hyacinthe-primus/File_Converter_Pro/releases", {
+    fetch("https://api.github.com/repos/Hyacinthe-primus/File-Converter-Pro/releases", {
       headers: { Accept: "application/vnd.github+json" },
     })
       .then((r) => r.json())

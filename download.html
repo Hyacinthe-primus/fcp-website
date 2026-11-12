@@ -25,7 +25,7 @@
         <a id="modal-kofi-btn" href="https://ko-fi.com/hyacinthe_primus/goal?g=0" rel="noopener" class="btn btn-primary" data-fcp-href="kofiUrl">
           <i class="fas fa-heart"></i> Support on Ko-fi
         </a>
-        <a id="modal-github-btn" href="https://github.com/Hyacinthe-primus/File_Converter_Pro" rel="noopener" class="btn btn-ghost" data-fcp-href="githubUrl">
+        <a id="modal-github-btn" href="https://github.com/Hyacinthe-primus/File-Converter-Pro" rel="noopener" class="btn btn-ghost" data-fcp-href="githubUrl">
           <i class="fab fa-github"></i> Star on GitHub instead
         </a>
       </div>
@@ -94,7 +94,7 @@
             <a href="#"
                class="btn btn-primary download-trigger"
                data-fcp-dl="installerUrl"
-               data-href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe">
+               data-href="https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe">
               <i class="fas fa-download"></i> FileConverterPro_Setup_v<span data-fcp="version">1.0.8</span>.exe
             </a>
             <p class="card-meta">No admin rights required · ~130 MB</p>
@@ -107,7 +107,7 @@
             <a href="#"
                class="btn btn-outline download-trigger"
                data-fcp-dl="portableUrl"
-               data-href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip">
+               data-href="https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip">
               <i class="fas fa-download"></i> File_Converter_Pro_v<span data-fcp="version">1.0.8</span>.zip
             </a>
             <p class="card-meta">No file associations set automatically</p>
@@ -117,7 +117,7 @@
             <div class="card-icon"><i class="fab fa-github"></i></div>
             <h3>From Source</h3>
             <p class="card-sub">Clone the repo and run it directly with Python. The setup process is fully documented and usually takes around five minutes on a clean machine.</p>
-            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" class="btn btn-ghost" target="_blank" rel="noopener" data-fcp-href="githubUrl">
+            <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro" class="btn btn-ghost" target="_blank" rel="noopener" data-fcp-href="githubUrl">
               <i class="fab fa-github"></i> View on GitHub
             </a>
             <p class="card-meta">Requires Python 3.10 or 3.13</p>
@@ -132,13 +132,13 @@
 
         <p style="margin-bottom:.75rem;font-size:.9rem;"><strong style="color:var(--ink)">Installer (silent):</strong></p>
         <div class="code-block">
-          <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
+          <code data-fcp-installer-cmd>$f="$env:TEMP\fcp.exe"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/FileConverterPro_Setup_v1.0.8.exe" -OutFile $f; Start-Process $f "/SILENT" -Wait; Remove-Item $f</code>
           <button class="copy-btn">Copy</button>
         </div>
 
         <p style="margin-bottom:.75rem;font-size:.9rem;"><strong style="color:var(--ink)">Portable (extracts to Downloads):</strong></p>
         <div class="code-block">
-          <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File_Converter_Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
+          <code data-fcp-portable-cmd>$z="$env:TEMP\fcp.zip"; $d="$env:USERPROFILE\Downloads\FileConverterPro"; Invoke-WebRequest "https://github.com/Hyacinthe-primus/File-Converter-Pro/releases/latest/download/File_Converter_Pro_v1.0.8.zip" -OutFile $z; Expand-Archive $z -DestinationPath $d -Force; Remove-Item $z; Start-Process explorer.exe $d</code>
           <button class="copy-btn">Copy</button>
         </div>
 
@@ -184,7 +184,7 @@
         </table>
 
         <div class="alert warn" style="margin-top:2.5rem">
-          <strong>Heads up – Windows Defender might flag it:</strong> FCP is compiled with PyInstaller, and its bundled media assets can trigger false positives. FFmpeg is not bundled; if you install it into the app folder, that binary may also be flagged. Adding the install folder to your Defender exclusion list (the installer offers to do this automatically) is strongly recommended. The app makes zero outbound connections during conversions. For more, read the README on <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/README.md" target="_blank" rel="noopener" data-fcp-href="githubReadmeUrl">GitHub</a>.
+          <strong>Heads up – Windows Defender might flag it:</strong> FCP is compiled with PyInstaller, and its bundled media assets can trigger false positives. FFmpeg is not bundled; if you install it into the app folder, that binary may also be flagged. Adding the install folder to your Defender exclusion list (the installer offers to do this automatically) is strongly recommended. The app makes zero outbound connections during conversions. For more, read the README on <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/README.md" target="_blank" rel="noopener" data-fcp-href="githubReadmeUrl">GitHub</a>.
         </div>
 
         <div style="margin-top:3rem;text-align:center">
@@ -193,7 +193,7 @@
             <a href="https://hyacinthe-primus.itch.io/file-converter-pro" class="btn btn-outline" target="_blank" rel="noopener" data-fcp-href="itchioUrl">
               <i class="fas fa-gamepad"></i> itch.io
             </a>
-            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/releases" class="btn btn-outline" target="_blank" rel="noopener">
+            <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/releases" class="btn btn-outline" target="_blank" rel="noopener">
               <i class="fab fa-github"></i> GitHub Releases
             </a>
           </div>
@@ -228,7 +228,7 @@
           <p>Free, offline, all-in-one file converter for Windows. Built to feel like a real product.</p>
           <p class="footer-tagline">Because file conversion should actually feel good.</p>
           <div class="footer-social">
-            <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro" aria-label="GitHub" target="_blank" rel="noopener" data-fcp-href="githubUrl"><i class="fab fa-github"></i></a>
             <a href="https://hyacinthe-primus.itch.io/file-converter-pro" aria-label="itch.io" target="_blank" rel="noopener" data-fcp-href="itchioUrl"><i class="fas fa-gamepad"></i></a>
             <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" aria-label="Ko-fi" target="_blank" rel="noopener" data-fcp-href="kofiUrl"><i class="fas fa-heart"></i></a>
           </div>
@@ -245,10 +245,10 @@
         <div class="footer-col">
           <h4>Project</h4>
           <ul>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki" target="_blank" rel="noopener" data-fcp-href="wikiUrl">Wiki</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File-Converter-Pro" target="_blank" rel="noopener" data-fcp-href="githubUrl">GitHub</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki" target="_blank" rel="noopener" data-fcp-href="wikiUrl">Wiki</a></li>
             <li><a href="https://github.com/Hyacinthe-primus/FCP-themes" target="_blank" rel="noopener" data-fcp-href="themesUrl">Themes</a></li>
-            <li><a href="https://github.com/Hyacinthe-primus/File_Converter_Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-fcp-href="contributingUrl">Contributing</a></li>
+            <li><a href="https://github.com/Hyacinthe-primus/File-Converter-Pro/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-fcp-href="contributingUrl">Contributing</a></li>
             <li><a href="https://ko-fi.com/hyacinthe_primus/goal?g=0" target="_blank" rel="noopener" data-fcp-href="kofiUrl">Support the project ☕</a></li>
           </ul>
         </div>

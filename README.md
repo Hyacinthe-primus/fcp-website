@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://file-converter-pro.org/">Website</a> •
-  <a href="https://github.com/Hyacinthe-primus/File_Converter_Pro">App Source Code</a> •
+  <a href="https://github.com/Hyacinthe-primus/File-Converter-Pro">App Source Code</a> •
   <a href="https://ko-fi.com/hyacinthe_primus/goal?g=0">Support</a>
 </p>
 
@@ -68,8 +68,8 @@ http://localhost:8000
 ## Links
 
 - **Website:** [file-converter-pro.org](https://file-converter-pro.org/)
-- **App Source Code:** [GitHub](https://github.com/Hyacinthe-primus/File_Converter_Pro)
-- **Wiki:** [File Converter Pro Wiki](https://github.com/Hyacinthe-primus/File_Converter_Pro/wiki)
+- **App Source Code:** [GitHub](https://github.com/Hyacinthe-primus/File-Converter-Pro)
+- **Wiki:** [File Converter Pro Wiki](https://github.com/Hyacinthe-primus/File-Converter-Pro/wiki)
 - **Themes:** [FCP Themes](https://github.com/Hyacinthe-primus/FCP-themes)
 - **Support:** [Ko-fi](https://ko-fi.com/hyacinthe_primus/goal?g=0)
 
